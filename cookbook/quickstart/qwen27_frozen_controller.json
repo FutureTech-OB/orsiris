@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "seed": 20261021,
+  "model": {"backend": "hf", "model_id": "Qwen/Qwen3.5-27B", "path": "../../checkpoints/Qwen3.5-27B", "dtype": "bfloat16", "device_map": "auto", "auto_class": "image_text", "chat_template": true, "enable_thinking": false},
+  "cases": "organization_cases.json",
+  "output": "../../runs/qwen27-frozen-controller",
+  "directions": {
+    "frozen": {"kind": "controller", "model_id": "Qwen/Qwen3.5-27B", "layer": 48, "checkpoint": "../../checkpoints/controller.pt", "sae_checkpoint": "../../checkpoints/layer48.sae.pt", "top_k": 100, "activation": "raw_topk", "context_last_n": 16}
+  },
+  "interventions": [
+    {"name": "frozen_sae", "mode": "add", "direction": "frozen", "strength": 0.05, "scale": "residual_norm", "site": "last"}
+  ]
+}

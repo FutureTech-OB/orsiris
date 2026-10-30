@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "description": "Fixed-payoff ultimatum examples. This common runner reads legal letter probabilities; the historical 9B experiment used sampled Accept/Reject text. These are related protocols, not an exact historical rerun.",
+  "cases": [
+    {
+      "id": "ultimatum_90_10",
+      "event": "You and another person are to split $100. The other person proposes: they keep $90 and you get $10.",
+      "context": "If you Accept, the money is split as proposed. If you Reject, both of you get $0.",
+      "question": "Would you accept or reject this offer?",
+      "choices": [{"id": "Accept", "text": "Accept", "value": 1}, {"id": "Reject", "text": "Reject", "value": 0}],
+      "orders": [[0, 1], [1, 0]]
+    },
+    {
+      "id": "ultimatum_50_50",
+      "event": "You and another person are to split $100. The other person proposes: they keep $50 and you get $50.",
+      "context": "If you Accept, the money is split as proposed. If you Reject, both of you get $0.",
+      "question": "Would you accept or reject this offer?",
+      "choices": [{"id": "Accept", "text": "Accept", "value": 1}, {"id": "Reject", "text": "Reject", "value": 0}],
+      "orders": [[0, 1], [1, 0]]
+    }
+  ],
+  "effects": []
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "seed": 20261021,
+  "model": {"backend": "hf", "model_id": "Qwen/Qwen3.5-27B", "path": "../../checkpoints/Qwen3.5-27B", "dtype": "bfloat16", "device_map": "auto", "auto_class": "image_text", "chat_template": true, "enable_thinking": false},
+  "cases": "organization_cases.json",
+  "output": "../../runs/qwen27-sae-organization",
+  "directions": {
+    "example_features_replace_before_research": {"kind": "sae", "model_id": "Qwen/Qwen3.5-27B", "layer": 48, "checkpoint": "../../checkpoints/layer48.sae.pt", "feature_ids": [0,1], "weights": [1,-0.5], "top_k": 100, "activation": "raw_topk"}
+  },
+  "interventions": [
+    {"name": "sae_combination", "mode": "add", "direction": "example_features_replace_before_research", "strength": 0.05, "scale": "residual_norm", "site": "last"}
+  ]
+}

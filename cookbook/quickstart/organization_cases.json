@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "description": "Two reusable organization-unfairness conditions adapted from the 27B diagnostic-link scripts. Both report and silence are action choices, not mediator selection. No fabricated human benchmark is supplied.",
+  "cases": [
+    {
+      "id": "credit_low_risk",
+      "event": "Imagine yourself as the employee in the following situation. You are employee E17; your manager is M42. The work log records the actual contributions as E17: 85%, M42: 15%. In the final presentation to senior leadership, the displayed project credits are E17: 15%, M42: 85%.\nIn other words, you completed 85% of the work and your manager completed 15%; the presentation gave you 15% of the credit and your manager 85%.\nThe presentation has now ended.",
+      "context": "If you report this situation, an independent confidential channel will protect your identity. Your manager cannot penalize you for reporting.",
+      "question": "Choose the action you would take based on the situation.",
+      "choices": [
+        {"id": "Report", "text": "Submit a formal complaint to senior leadership about the credit allocation.", "value": 1},
+        {"id": "Silent", "text": "Remain silent and continue working as usual.", "value": 0},
+        {"id": "Retaliate", "text": "Withhold project information to undermine the manager in return.", "value": 0}
+      ],
+      "orders": [[0,1,2], [0,2,1], [1,0,2], [1,2,0], [2,0,1], [2,1,0]],
+      "metadata": {"source": "inside27_v23/run_diagnostic_link.py", "risk": "low", "form": 0}
+    },
+    {
+      "id": "credit_high_risk",
+      "event": "Imagine yourself as the employee in the following situation. You are employee E17; your manager is M42. The work log records the actual contributions as E17: 85%, M42: 15%. In the final presentation to senior leadership, the displayed project credits are E17: 15%, M42: 85%.\nIn other words, you completed 85% of the work and your manager completed 15%; the presentation gave you 15% of the credit and your manager 85%.\nThe presentation has now ended.",
+      "context": "If you report this situation, your manager will learn your identity. Your manager can penalize you through performance ratings and future assignments, and there is no protection from retaliation.",
+      "question": "Choose the action you would take based on the situation.",
+      "choices": [
+        {"id": "Report", "text": "Submit a formal complaint to senior leadership about the credit allocation.", "value": 1},
+        {"id": "Silent", "text": "Remain silent and continue working as usual.", "value": 0},
+        {"id": "Retaliate", "text": "Withhold project information to undermine the manager in return.", "value": 0}
+      ],
+      "orders": [[0,1,2], [0,2,1], [1,0,2], [1,2,0], [2,0,1], [2,1,0]],
+      "metadata": {"source": "inside27_v23/run_diagnostic_link.py", "risk": "high", "form": 0}
+    }
+  ],
+  "effects": []
+}

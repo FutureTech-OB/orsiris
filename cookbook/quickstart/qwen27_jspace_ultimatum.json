@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "seed": 20261021,
+  "model": {"backend": "hf", "model_id": "Qwen/Qwen3.5-27B", "path": "../../checkpoints/Qwen3.5-27B", "dtype": "bfloat16", "device_map": "auto", "auto_class": "image_text", "chat_template": true, "enable_thinking": false},
+  "cases": "ultimatum_cases.json",
+  "output": "../../runs/qwen27-jspace-ultimatum",
+  "directions": {
+    "unfair": {"kind": "jspace", "model_id": "Qwen/Qwen3.5-27B", "layer": 48, "checkpoint": "../../checkpoints/Qwen3.5-27B_jacobian_lens.pt", "tokens": ["unfair"]},
+    "fair": {"kind": "jspace", "model_id": "Qwen/Qwen3.5-27B", "layer": 48, "checkpoint": "../../checkpoints/Qwen3.5-27B_jacobian_lens.pt", "tokens": ["fair"]}
+  },
+  "interventions": [
+    {"name": "unfair_ablation", "mode": "ablate", "direction": "unfair", "strength": 1, "site": "last"},
+    {"name": "unfair_to_fair", "mode": "swap", "direction": "unfair", "target": "fair", "strength": 1, "site": "last"}
+  ]
+}

@@ -1,0 +1,2119 @@
+{
+  "studies": [
+    {
+      "protocol": "per_scenario_sae_calibration_v13",
+      "date": "2026-10-20",
+      "study_id": "HRM_1_1",
+      "title": "薪酬决策",
+      "model": "/models/Qwen3.5-27B",
+      "sae_root": "/models/SAE27B",
+      "layer": 48,
+      "hidden_size": 5120,
+      "sae_width": 81920,
+      "seed": 2026102013,
+      "context_window": 16,
+      "feature_count": 8,
+      "fit_orders": [
+        0,
+        1
+      ],
+      "selection_orders": [
+        2
+      ],
+      "all_orders": [
+        0,
+        1,
+        2
+      ],
+      "order_definition": {
+        "0": "original",
+        "1": "reverse",
+        "2": "rotate left by floor(n_options/2)"
+      },
+      "doses": [
+        0.1,
+        0.3,
+        0.6
+      ],
+      "fit_penalties": [
+        0.1,
+        1.0
+      ],
+      "ridge": 0.1,
+      "probability_quality": 0.9,
+      "shortlist_per_family": 2,
+      "families": [
+        "sae_static",
+        "sae_context"
+      ],
+      "cases": [
+        {
+          "id": "HRM_1_1_A_q1",
+          "study_id": "HRM_1_1",
+          "group": "A",
+          "group_n": 20,
+          "population": "corporate board members",
+          "item": 1,
+          "scenario": "Background information: Imagine you are a board director. Your task is to make two decisions regarding whether you would increase CEO pay.\n\nCompany background: You are a board member for a publicly traded company. The firm has shown consistent revenue growth over the past three years, and the board is evaluating the CEO's current total compensation package. A professional consulting firm conducted a compensation benchmarking analysis comparing the CEO's pay to peer CEOs in the same industry. The consulting firm's report stated that the CEO's current total compensation is about 10% below the industry average. To ensure CEO retention, the firm recommended a 10% increase in total pay.\n\nProposal core: You learned the SEC recently approved the CEO Pay Ratio provision, which requires most public companies to disclose the ratio of CEO pay to median employee pay. In preparation for this disclosure requirement, the board has calculated the CEO pay ratio for your firm and approximated the pay ratio for your industry. Currently, your firm's pay ratio is 250 to 1, and the average pay ratio for your industry is 200 to 1. Your firm's ratio of CEO pay relative to median employee pay is significantly higher than the industry average. The board has also been monitoring expected investor reaction to a CEO pay raise by following investor posts on Twitter and other social media. The board expects that when investors make their say-on-pay vote, they will vote to reject a pay increase for the CEO.\n\nDecision-making task: After evaluating the proposal, please answer the following two CEO compensation decision questions:",
+          "question": "Based only on the information presented above, what is the likelihood that you would approve a remuneration increase of 10% for the CEO? Use a scale from 0% to 100% in 10% increments, where 0% = definitely would not recommend the increase, 50% = moderately supportive of the increase, and 100% = definitely would recommend the increase.",
+          "values": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50,
+            60,
+            70,
+            80,
+            90,
+            100
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "HRM_1_1_A_q2",
+          "study_id": "HRM_1_1",
+          "group": "A",
+          "group_n": 20,
+          "population": "corporate board members",
+          "item": 2,
+          "scenario": "Background information: Imagine you are a board director. Your task is to make two decisions regarding whether you would increase CEO pay.\n\nCompany background: You are a board member for a publicly traded company. The firm has shown consistent revenue growth over the past three years, and the board is evaluating the CEO's current total compensation package. A professional consulting firm conducted a compensation benchmarking analysis comparing the CEO's pay to peer CEOs in the same industry. The consulting firm's report stated that the CEO's current total compensation is about 10% below the industry average. To ensure CEO retention, the firm recommended a 10% increase in total pay.\n\nProposal core: You learned the SEC recently approved the CEO Pay Ratio provision, which requires most public companies to disclose the ratio of CEO pay to median employee pay. In preparation for this disclosure requirement, the board has calculated the CEO pay ratio for your firm and approximated the pay ratio for your industry. Currently, your firm's pay ratio is 250 to 1, and the average pay ratio for your industry is 200 to 1. Your firm's ratio of CEO pay relative to median employee pay is significantly higher than the industry average. The board has also been monitoring expected investor reaction to a CEO pay raise by following investor posts on Twitter and other social media. The board expects that when investors make their say-on-pay vote, they will vote to reject a pay increase for the CEO.\n\nDecision-making task: After evaluating the proposal, please answer the following two CEO compensation decision questions:",
+          "question": "Based upon the available information, would you recommend increasing, decreasing, or not changing total remuneration for the CEO? Use a scale from -5 to 5 in increments of 1, where -5 = definitely decrease pay, 0 = no change to pay, and 5 = definitely increase pay.",
+          "values": [
+            -5,
+            -4,
+            -3,
+            -2,
+            -1,
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "HRM_1_1_B_q1",
+          "study_id": "HRM_1_1",
+          "group": "B",
+          "group_n": 19,
+          "population": "corporate board members",
+          "item": 1,
+          "scenario": "Background information: Imagine you are a board director. Your task is to make two decisions regarding whether you would increase CEO pay.\n\nCompany background: You are a board member for a publicly traded company. The firm has shown consistent revenue growth over the past three years, and the board is evaluating the CEO's current total compensation package. A professional consulting firm conducted a compensation benchmarking analysis comparing the CEO's pay to peer CEOs in the same industry. The consulting firm's report stated that the CEO's current total compensation is about 10% below the industry average. To ensure CEO retention, the firm recommended a 10% increase in total pay.\n\nProposal core: You learned the SEC recently approved the CEO Pay Ratio provision, which requires most public companies to disclose the ratio of CEO pay to median employee pay. In preparation for this disclosure requirement, the board has calculated the CEO pay ratio for your firm and approximated the pay ratio for your industry. Currently, your firm's pay ratio is 250 to 1, and the average pay ratio for your industry is 200 to 1. Your firm's ratio of CEO pay relative to median employee pay is significantly higher than the industry average. The board has also been monitoring expected investor reaction to a CEO pay raise by following investor posts on Twitter and other social media. The board expects that when investors make their say-on-pay vote, they will vote to accept a pay increase for the CEO.\n\nDecision-making task: After evaluating the proposal, please answer the following two CEO compensation decision questions:",
+          "question": "Based only on the information presented above, what is the likelihood that you would approve a remuneration increase of 10% for the CEO? Use a scale from 0% to 100% in 10% increments, where 0% = definitely would not recommend the increase, 50% = moderately supportive of the increase, and 100% = definitely would recommend the increase.",
+          "values": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50,
+            60,
+            70,
+            80,
+            90,
+            100
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "HRM_1_1_B_q2",
+          "study_id": "HRM_1_1",
+          "group": "B",
+          "group_n": 19,
+          "population": "corporate board members",
+          "item": 2,
+          "scenario": "Background information: Imagine you are a board director. Your task is to make two decisions regarding whether you would increase CEO pay.\n\nCompany background: You are a board member for a publicly traded company. The firm has shown consistent revenue growth over the past three years, and the board is evaluating the CEO's current total compensation package. A professional consulting firm conducted a compensation benchmarking analysis comparing the CEO's pay to peer CEOs in the same industry. The consulting firm's report stated that the CEO's current total compensation is about 10% below the industry average. To ensure CEO retention, the firm recommended a 10% increase in total pay.\n\nProposal core: You learned the SEC recently approved the CEO Pay Ratio provision, which requires most public companies to disclose the ratio of CEO pay to median employee pay. In preparation for this disclosure requirement, the board has calculated the CEO pay ratio for your firm and approximated the pay ratio for your industry. Currently, your firm's pay ratio is 250 to 1, and the average pay ratio for your industry is 200 to 1. Your firm's ratio of CEO pay relative to median employee pay is significantly higher than the industry average. The board has also been monitoring expected investor reaction to a CEO pay raise by following investor posts on Twitter and other social media. The board expects that when investors make their say-on-pay vote, they will vote to accept a pay increase for the CEO.\n\nDecision-making task: After evaluating the proposal, please answer the following two CEO compensation decision questions:",
+          "question": "Based upon the available information, would you recommend increasing, decreasing, or not changing total remuneration for the CEO? Use a scale from -5 to 5 in increments of 1, where -5 = definitely decrease pay, 0 = no change to pay, and 5 = definitely increase pay.",
+          "values": [
+            -5,
+            -4,
+            -3,
+            -2,
+            -1,
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "HRM_1_1_C_q1",
+          "study_id": "HRM_1_1",
+          "group": "C",
+          "group_n": 18,
+          "population": "corporate board members",
+          "item": 1,
+          "scenario": "Background information: Imagine you are a board director. Your task is to make two decisions regarding whether you would increase CEO pay.\n\nCompany background: You are a board member for a publicly traded company. The firm has shown consistent revenue growth over the past three years, and the board is evaluating the CEO's current total compensation package. A professional consulting firm conducted a compensation benchmarking analysis comparing the CEO's pay to peer CEOs in the same industry. The consulting firm's report stated that the CEO's current total compensation is about 10% below the industry average. To ensure CEO retention, the firm recommended a 10% increase in total pay.\n\nProposal core: You learned the SEC recently approved the CEO Pay Ratio provision, which requires most public companies to disclose the ratio of CEO pay to median employee pay. In preparation for this disclosure requirement, the board has calculated the CEO pay ratio for your firm and approximated the pay ratio for your industry. Currently, your firm's pay ratio is 250 to 1, and the average pay ratio for your industry is 300 to 1. Your firm's ratio of CEO pay relative to median employee pay is significantly lower than the industry average. The board has also been monitoring expected investor reaction to a CEO pay raise by following investor posts on Twitter and other social media. The board expects that when investors make their say-on-pay vote, they will vote to reject a pay increase for the CEO.\n\nDecision-making task: After evaluating the proposal, please answer the following two CEO compensation decision questions:",
+          "question": "Based only on the information presented above, what is the likelihood that you would approve a remuneration increase of 10% for the CEO? Use a scale from 0% to 100% in 10% increments, where 0% = definitely would not recommend the increase, 50% = moderately supportive of the increase, and 100% = definitely would recommend the increase.",
+          "values": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50,
+            60,
+            70,
+            80,
+            90,
+            100
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "HRM_1_1_C_q2",
+          "study_id": "HRM_1_1",
+          "group": "C",
+          "group_n": 18,
+          "population": "corporate board members",
+          "item": 2,
+          "scenario": "Background information: Imagine you are a board director. Your task is to make two decisions regarding whether you would increase CEO pay.\n\nCompany background: You are a board member for a publicly traded company. The firm has shown consistent revenue growth over the past three years, and the board is evaluating the CEO's current total compensation package. A professional consulting firm conducted a compensation benchmarking analysis comparing the CEO's pay to peer CEOs in the same industry. The consulting firm's report stated that the CEO's current total compensation is about 10% below the industry average. To ensure CEO retention, the firm recommended a 10% increase in total pay.\n\nProposal core: You learned the SEC recently approved the CEO Pay Ratio provision, which requires most public companies to disclose the ratio of CEO pay to median employee pay. In preparation for this disclosure requirement, the board has calculated the CEO pay ratio for your firm and approximated the pay ratio for your industry. Currently, your firm's pay ratio is 250 to 1, and the average pay ratio for your industry is 300 to 1. Your firm's ratio of CEO pay relative to median employee pay is significantly lower than the industry average. The board has also been monitoring expected investor reaction to a CEO pay raise by following investor posts on Twitter and other social media. The board expects that when investors make their say-on-pay vote, they will vote to reject a pay increase for the CEO.\n\nDecision-making task: After evaluating the proposal, please answer the following two CEO compensation decision questions:",
+          "question": "Based upon the available information, would you recommend increasing, decreasing, or not changing total remuneration for the CEO? Use a scale from -5 to 5 in increments of 1, where -5 = definitely decrease pay, 0 = no change to pay, and 5 = definitely increase pay.",
+          "values": [
+            -5,
+            -4,
+            -3,
+            -2,
+            -1,
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "HRM_1_1_D_q1",
+          "study_id": "HRM_1_1",
+          "group": "D",
+          "group_n": 18,
+          "population": "corporate board members",
+          "item": 1,
+          "scenario": "Background information: Imagine you are a board director. Your task is to make two decisions regarding whether you would increase CEO pay.\n\nCompany background: You are a board member for a publicly traded company. The firm has shown consistent revenue growth over the past three years, and the board is evaluating the CEO's current total compensation package. A professional consulting firm conducted a compensation benchmarking analysis comparing the CEO's pay to peer CEOs in the same industry. The consulting firm's report stated that the CEO's current total compensation is about 10% below the industry average. To ensure CEO retention, the firm recommended a 10% increase in total pay.\n\nProposal core: You learned the SEC recently approved the CEO Pay Ratio provision, which requires most public companies to disclose the ratio of CEO pay to median employee pay. In preparation for this disclosure requirement, the board has calculated the CEO pay ratio for your firm and approximated the pay ratio for your industry. Currently, your firm's pay ratio is 250 to 1, and the average pay ratio for your industry is 300 to 1. Your firm's ratio of CEO pay relative to median employee pay is significantly lower than the industry average. The board has also been monitoring expected investor reaction to a CEO pay raise by following investor posts on Twitter and other social media. The board expects that when investors make their say-on-pay vote, they will vote to accept a pay increase for the CEO.\n\nDecision-making task: After evaluating the proposal, please answer the following two CEO compensation decision questions:",
+          "question": "Based only on the information presented above, what is the likelihood that you would approve a remuneration increase of 10% for the CEO? Use a scale from 0% to 100% in 10% increments, where 0% = definitely would not recommend the increase, 50% = moderately supportive of the increase, and 100% = definitely would recommend the increase.",
+          "values": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50,
+            60,
+            70,
+            80,
+            90,
+            100
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "HRM_1_1_D_q2",
+          "study_id": "HRM_1_1",
+          "group": "D",
+          "group_n": 18,
+          "population": "corporate board members",
+          "item": 2,
+          "scenario": "Background information: Imagine you are a board director. Your task is to make two decisions regarding whether you would increase CEO pay.\n\nCompany background: You are a board member for a publicly traded company. The firm has shown consistent revenue growth over the past three years, and the board is evaluating the CEO's current total compensation package. A professional consulting firm conducted a compensation benchmarking analysis comparing the CEO's pay to peer CEOs in the same industry. The consulting firm's report stated that the CEO's current total compensation is about 10% below the industry average. To ensure CEO retention, the firm recommended a 10% increase in total pay.\n\nProposal core: You learned the SEC recently approved the CEO Pay Ratio provision, which requires most public companies to disclose the ratio of CEO pay to median employee pay. In preparation for this disclosure requirement, the board has calculated the CEO pay ratio for your firm and approximated the pay ratio for your industry. Currently, your firm's pay ratio is 250 to 1, and the average pay ratio for your industry is 300 to 1. Your firm's ratio of CEO pay relative to median employee pay is significantly lower than the industry average. The board has also been monitoring expected investor reaction to a CEO pay raise by following investor posts on Twitter and other social media. The board expects that when investors make their say-on-pay vote, they will vote to accept a pay increase for the CEO.\n\nDecision-making task: After evaluating the proposal, please answer the following two CEO compensation decision questions:",
+          "question": "Based upon the available information, would you recommend increasing, decreasing, or not changing total remuneration for the CEO? Use a scale from -5 to 5 in increments of 1, where -5 = definitely decrease pay, 0 = no change to pay, and 5 = definitely increase pay.",
+          "values": [
+            -5,
+            -4,
+            -3,
+            -2,
+            -1,
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        }
+      ],
+      "effects": [
+        {
+          "effect_id": "E77_007",
+          "study_id": "HRM_1_1",
+          "label": "薪酬比率 → 调薪幅度",
+          "groups1": [
+            "C",
+            "D"
+          ],
+          "groups2": [
+            "A",
+            "B"
+          ],
+          "items": [
+            2
+          ],
+          "span": 10,
+          "human_delta": 1.9699999999999998,
+          "coefficients": {
+            "HRM_1_1_C_q2": 0.5,
+            "HRM_1_1_D_q2": 0.5,
+            "HRM_1_1_A_q2": -0.5128205128205128,
+            "HRM_1_1_B_q2": -0.48717948717948717
+          },
+          "split": "calibration",
+          "human_sig": "sig",
+          "target_scope": "Published group means pooled across shareholder-vote conditions; no fabricated factorial-cell target."
+        },
+        {
+          "effect_id": "E77_008",
+          "study_id": "HRM_1_1",
+          "label": "薪酬比率 → 批准加薪",
+          "groups1": [
+            "C",
+            "D"
+          ],
+          "groups2": [
+            "A",
+            "B"
+          ],
+          "items": [
+            1
+          ],
+          "span": 100,
+          "human_delta": 26.450000000000003,
+          "coefficients": {
+            "HRM_1_1_C_q1": 0.5,
+            "HRM_1_1_D_q1": 0.5,
+            "HRM_1_1_A_q1": -0.5128205128205128,
+            "HRM_1_1_B_q1": -0.48717948717948717
+          },
+          "split": "calibration",
+          "human_sig": "sig",
+          "target_scope": "Published group means pooled across shareholder-vote conditions; no fabricated factorial-cell target."
+        }
+      ],
+      "fit_case_ids": [
+        "HRM_1_1_A_q1",
+        "HRM_1_1_A_q2",
+        "HRM_1_1_B_q1",
+        "HRM_1_1_B_q2",
+        "HRM_1_1_C_q1",
+        "HRM_1_1_C_q2",
+        "HRM_1_1_D_q1",
+        "HRM_1_1_D_q2"
+      ],
+      "fit_effect_ids": [
+        "E77_007",
+        "E77_008"
+      ],
+      "contrast_rank": 2,
+      "main_gpu": 0,
+      "worker_gpu": 1,
+      "selection": "Fit all known effects within this scenario on original/reverse orders. Shortlist two configurations per SAE family and select on the third order. Primary is best valid SAE family on third order, with Prompt fallback. All-three-order results are calibration outcomes, not held-out human-effect validation.",
+      "primary_metric": "Per-order abs(model treatment effect - human treatment effect)/abs(human treatment effect), averaged equally over effects and three orders. Also report original order, each effect, and scale-normalized absolute error.",
+      "limitations": [
+        "Original wording only. All reported human effects are used for calibration; no independent human-effect validation in this run.",
+        "Each study has its own eight-direction controller. Within a study there is no question, condition, or desired-answer routing.",
+        "No random-direction controls, per explicit user instruction.",
+        "LLM and SAE dictionary remain frozen. Only direction selection and controller coefficients are fitted.",
+        "Context gates use a separate causal-prefix forward. No later survey-item text enters the gate.",
+        "JAP trust contains dependent pairwise contrasts and a reverse-coded item; preserve coefficients and report effective rank."
+      ],
+      "source_hashes": {
+        "work\\executive_sae_domain_27b_20261020\\sae_domain_v12_protocol.json": "29630f38aebc433ddcbd8a38b55b41b708f02af0a6a3fae90e1b3f9edeaa0645",
+        "work\\executive_sae_20261019\\protocol.json": "095c3f873590b77f1baab18f81a5e63686e0d188d7112cd28121188e06b7b5ce",
+        "work\\executive_sae_20261019\\sae_chat_v4_protocol.json": "351448e842f3c95b083185d92e9a487bff3224e07eaba5c3a6dccb88c921d5b6"
+      }
+    },
+    {
+      "protocol": "per_scenario_sae_calibration_v13",
+      "date": "2026-10-20",
+      "study_id": "AMJ_1_3",
+      "title": "建议内容与支持",
+      "model": "/models/Qwen3.5-27B",
+      "sae_root": "/models/SAE27B",
+      "layer": 48,
+      "hidden_size": 5120,
+      "sae_width": 81920,
+      "seed": 2026102013,
+      "context_window": 16,
+      "feature_count": 8,
+      "fit_orders": [
+        0,
+        1
+      ],
+      "selection_orders": [
+        2
+      ],
+      "all_orders": [
+        0,
+        1,
+        2
+      ],
+      "order_definition": {
+        "0": "original",
+        "1": "reverse",
+        "2": "rotate left by floor(n_options/2)"
+      },
+      "doses": [
+        0.1,
+        0.3,
+        0.6
+      ],
+      "fit_penalties": [
+        0.1,
+        1.0
+      ],
+      "ridge": 0.1,
+      "probability_quality": 0.9,
+      "shortlist_per_family": 2,
+      "families": [
+        "sae_static",
+        "sae_context"
+      ],
+      "cases": [
+        {
+          "id": "AMJ_1_3_A_q1",
+          "study_id": "AMJ_1_3",
+          "group": "A",
+          "group_n": 98,
+          "population": "managers evaluating an employee suggestion",
+          "item": 1,
+          "scenario": "Imagine you are a manager in a company. You will read a description of your organization and of an idea that one of your subordinates presented in a recent team meeting. Read the description carefully, adopt the role of the manager described in it, and then answer the questions that follow exactly as that manager would.\n\nThe ABS Engineering Company, located in Sacramento, is a civil engineering company that specializes in creating public bridges and tunnels across California. ABS has a corporate culture that emphasizes project efficiency and cost savings for its clients, so its employees seem to always complete their projects in time and under-budget. Once a month, the management team holds a meeting with employees to give updates on client projects and other office administrative issues. Then each manager splits off with his/her own project team to discuss specific project issues.\n\nYou are an engineering project manager at ABS and have been with the company for four years. During the most recent team meeting, Taylor, a junior engineer who has been with the firm for one year and reports to you, presented the following idea.\n\nTaylor's Idea\n\nOn the most recent bridge project, ABS used a new concrete mix product during construction that was cheaper than what they used to use, which helped their clients save money. However, after reading more outside research on the durability of this new product, Taylor believes that it may not last as long as ABS originally projected. Taylor feels that ABS needs to reinforce this latest bridge project in order to maintain ABS's reputation for excellence in the community.\n\nSpecifically, Taylor proposes that this bridge needs to be reinforced because a collapse of this bridge in particular would be extremely dangerous for anybody traveling across it as there is a 3-story drop to the creek below. Also, this is a high-traffic bridge, which means that a bridge collapse would impact a large number of people.\n\nNow please rate your extent of endorsement for the idea Taylor voiced. Rate each of the following five statements separately on a five-point scale, where 1 = \"strongly disagree\" and 5 = \"strongly agree\". Give one number for every statement; do not give an overall or averaged score.",
+          "question": "I would take Taylor's idea to my supervisor.",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "AMJ_1_3_A_q2",
+          "study_id": "AMJ_1_3",
+          "group": "A",
+          "group_n": 98,
+          "population": "managers evaluating an employee suggestion",
+          "item": 2,
+          "scenario": "Imagine you are a manager in a company. You will read a description of your organization and of an idea that one of your subordinates presented in a recent team meeting. Read the description carefully, adopt the role of the manager described in it, and then answer the questions that follow exactly as that manager would.\n\nThe ABS Engineering Company, located in Sacramento, is a civil engineering company that specializes in creating public bridges and tunnels across California. ABS has a corporate culture that emphasizes project efficiency and cost savings for its clients, so its employees seem to always complete their projects in time and under-budget. Once a month, the management team holds a meeting with employees to give updates on client projects and other office administrative issues. Then each manager splits off with his/her own project team to discuss specific project issues.\n\nYou are an engineering project manager at ABS and have been with the company for four years. During the most recent team meeting, Taylor, a junior engineer who has been with the firm for one year and reports to you, presented the following idea.\n\nTaylor's Idea\n\nOn the most recent bridge project, ABS used a new concrete mix product during construction that was cheaper than what they used to use, which helped their clients save money. However, after reading more outside research on the durability of this new product, Taylor believes that it may not last as long as ABS originally projected. Taylor feels that ABS needs to reinforce this latest bridge project in order to maintain ABS's reputation for excellence in the community.\n\nSpecifically, Taylor proposes that this bridge needs to be reinforced because a collapse of this bridge in particular would be extremely dangerous for anybody traveling across it as there is a 3-story drop to the creek below. Also, this is a high-traffic bridge, which means that a bridge collapse would impact a large number of people.\n\nNow please rate your extent of endorsement for the idea Taylor voiced. Rate each of the following five statements separately on a five-point scale, where 1 = \"strongly disagree\" and 5 = \"strongly agree\". Give one number for every statement; do not give an overall or averaged score.",
+          "question": "I would support Taylor's idea when talking with my supervisor.",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "AMJ_1_3_A_q3",
+          "study_id": "AMJ_1_3",
+          "group": "A",
+          "group_n": 98,
+          "population": "managers evaluating an employee suggestion",
+          "item": 3,
+          "scenario": "Imagine you are a manager in a company. You will read a description of your organization and of an idea that one of your subordinates presented in a recent team meeting. Read the description carefully, adopt the role of the manager described in it, and then answer the questions that follow exactly as that manager would.\n\nThe ABS Engineering Company, located in Sacramento, is a civil engineering company that specializes in creating public bridges and tunnels across California. ABS has a corporate culture that emphasizes project efficiency and cost savings for its clients, so its employees seem to always complete their projects in time and under-budget. Once a month, the management team holds a meeting with employees to give updates on client projects and other office administrative issues. Then each manager splits off with his/her own project team to discuss specific project issues.\n\nYou are an engineering project manager at ABS and have been with the company for four years. During the most recent team meeting, Taylor, a junior engineer who has been with the firm for one year and reports to you, presented the following idea.\n\nTaylor's Idea\n\nOn the most recent bridge project, ABS used a new concrete mix product during construction that was cheaper than what they used to use, which helped their clients save money. However, after reading more outside research on the durability of this new product, Taylor believes that it may not last as long as ABS originally projected. Taylor feels that ABS needs to reinforce this latest bridge project in order to maintain ABS's reputation for excellence in the community.\n\nSpecifically, Taylor proposes that this bridge needs to be reinforced because a collapse of this bridge in particular would be extremely dangerous for anybody traveling across it as there is a 3-story drop to the creek below. Also, this is a high-traffic bridge, which means that a bridge collapse would impact a large number of people.\n\nNow please rate your extent of endorsement for the idea Taylor voiced. Rate each of the following five statements separately on a five-point scale, where 1 = \"strongly disagree\" and 5 = \"strongly agree\". Give one number for every statement; do not give an overall or averaged score.",
+          "question": "I think Taylor's idea should be implemented.",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "AMJ_1_3_A_q4",
+          "study_id": "AMJ_1_3",
+          "group": "A",
+          "group_n": 98,
+          "population": "managers evaluating an employee suggestion",
+          "item": 4,
+          "scenario": "Imagine you are a manager in a company. You will read a description of your organization and of an idea that one of your subordinates presented in a recent team meeting. Read the description carefully, adopt the role of the manager described in it, and then answer the questions that follow exactly as that manager would.\n\nThe ABS Engineering Company, located in Sacramento, is a civil engineering company that specializes in creating public bridges and tunnels across California. ABS has a corporate culture that emphasizes project efficiency and cost savings for its clients, so its employees seem to always complete their projects in time and under-budget. Once a month, the management team holds a meeting with employees to give updates on client projects and other office administrative issues. Then each manager splits off with his/her own project team to discuss specific project issues.\n\nYou are an engineering project manager at ABS and have been with the company for four years. During the most recent team meeting, Taylor, a junior engineer who has been with the firm for one year and reports to you, presented the following idea.\n\nTaylor's Idea\n\nOn the most recent bridge project, ABS used a new concrete mix product during construction that was cheaper than what they used to use, which helped their clients save money. However, after reading more outside research on the durability of this new product, Taylor believes that it may not last as long as ABS originally projected. Taylor feels that ABS needs to reinforce this latest bridge project in order to maintain ABS's reputation for excellence in the community.\n\nSpecifically, Taylor proposes that this bridge needs to be reinforced because a collapse of this bridge in particular would be extremely dangerous for anybody traveling across it as there is a 3-story drop to the creek below. Also, this is a high-traffic bridge, which means that a bridge collapse would impact a large number of people.\n\nNow please rate your extent of endorsement for the idea Taylor voiced. Rate each of the following five statements separately on a five-point scale, where 1 = \"strongly disagree\" and 5 = \"strongly agree\". Give one number for every statement; do not give an overall or averaged score.",
+          "question": "I agree with Taylor's idea.",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "AMJ_1_3_A_q5",
+          "study_id": "AMJ_1_3",
+          "group": "A",
+          "group_n": 98,
+          "population": "managers evaluating an employee suggestion",
+          "item": 5,
+          "scenario": "Imagine you are a manager in a company. You will read a description of your organization and of an idea that one of your subordinates presented in a recent team meeting. Read the description carefully, adopt the role of the manager described in it, and then answer the questions that follow exactly as that manager would.\n\nThe ABS Engineering Company, located in Sacramento, is a civil engineering company that specializes in creating public bridges and tunnels across California. ABS has a corporate culture that emphasizes project efficiency and cost savings for its clients, so its employees seem to always complete their projects in time and under-budget. Once a month, the management team holds a meeting with employees to give updates on client projects and other office administrative issues. Then each manager splits off with his/her own project team to discuss specific project issues.\n\nYou are an engineering project manager at ABS and have been with the company for four years. During the most recent team meeting, Taylor, a junior engineer who has been with the firm for one year and reports to you, presented the following idea.\n\nTaylor's Idea\n\nOn the most recent bridge project, ABS used a new concrete mix product during construction that was cheaper than what they used to use, which helped their clients save money. However, after reading more outside research on the durability of this new product, Taylor believes that it may not last as long as ABS originally projected. Taylor feels that ABS needs to reinforce this latest bridge project in order to maintain ABS's reputation for excellence in the community.\n\nSpecifically, Taylor proposes that this bridge needs to be reinforced because a collapse of this bridge in particular would be extremely dangerous for anybody traveling across it as there is a 3-story drop to the creek below. Also, this is a high-traffic bridge, which means that a bridge collapse would impact a large number of people.\n\nNow please rate your extent of endorsement for the idea Taylor voiced. Rate each of the following five statements separately on a five-point scale, where 1 = \"strongly disagree\" and 5 = \"strongly agree\". Give one number for every statement; do not give an overall or averaged score.",
+          "question": "Taylor's idea is valuable.",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "AMJ_1_3_B_q1",
+          "study_id": "AMJ_1_3",
+          "group": "B",
+          "group_n": 98,
+          "population": "managers evaluating an employee suggestion",
+          "item": 1,
+          "scenario": "Imagine you are a manager in a company. You will read a description of your organization and of an idea that one of your subordinates presented in a recent team meeting. Read the description carefully, adopt the role of the manager described in it, and then answer the questions that follow exactly as that manager would.\n\nThe ABS Engineering Company, located in Sacramento, is a civil engineering company that specializes in creating public bridges and tunnels across California. ABS has a corporate culture that emphasizes project efficiency and cost savings for its clients, so its employees seem to always complete their projects in time and under-budget. Once a month, the management team holds a meeting with employees to give updates on client projects and other office administrative issues. Then each manager splits off with his/her own project team to discuss specific project issues.\n\nYou are an engineering project manager at ABS and have been with the company for four years. During the most recent team meeting, Taylor, a junior engineer who has been with the firm for one year and reports to you, presented the following idea.\n\nTaylor's Idea\n\nOn the most recent bridge project, ABS used a new concrete mix product during construction that was cheaper than what they used to use, which helped their clients save money. However, after reading more outside research on the durability of this new product, Taylor believes that it may not last as long as ABS originally projected. Taylor feels that ABS needs to reinforce this latest bridge project in order to maintain ABS's reputation for excellence in the community.\n\nSpecifically, Taylor proposes that this bridge needs to be reinforced because faster-than-expected deterioration of the bridge would be visually unappealing to the people who use it. Also, this bridge connects a sparsely populated rural area to the local city, so bridge deterioration would impact a small number of people who live in that area.\n\nNow please rate your extent of endorsement for the idea Taylor voiced. Rate each of the following five statements separately on a five-point scale, where 1 = \"strongly disagree\" and 5 = \"strongly agree\". Give one number for every statement; do not give an overall or averaged score.",
+          "question": "I would take Taylor's idea to my supervisor.",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "AMJ_1_3_B_q2",
+          "study_id": "AMJ_1_3",
+          "group": "B",
+          "group_n": 98,
+          "population": "managers evaluating an employee suggestion",
+          "item": 2,
+          "scenario": "Imagine you are a manager in a company. You will read a description of your organization and of an idea that one of your subordinates presented in a recent team meeting. Read the description carefully, adopt the role of the manager described in it, and then answer the questions that follow exactly as that manager would.\n\nThe ABS Engineering Company, located in Sacramento, is a civil engineering company that specializes in creating public bridges and tunnels across California. ABS has a corporate culture that emphasizes project efficiency and cost savings for its clients, so its employees seem to always complete their projects in time and under-budget. Once a month, the management team holds a meeting with employees to give updates on client projects and other office administrative issues. Then each manager splits off with his/her own project team to discuss specific project issues.\n\nYou are an engineering project manager at ABS and have been with the company for four years. During the most recent team meeting, Taylor, a junior engineer who has been with the firm for one year and reports to you, presented the following idea.\n\nTaylor's Idea\n\nOn the most recent bridge project, ABS used a new concrete mix product during construction that was cheaper than what they used to use, which helped their clients save money. However, after reading more outside research on the durability of this new product, Taylor believes that it may not last as long as ABS originally projected. Taylor feels that ABS needs to reinforce this latest bridge project in order to maintain ABS's reputation for excellence in the community.\n\nSpecifically, Taylor proposes that this bridge needs to be reinforced because faster-than-expected deterioration of the bridge would be visually unappealing to the people who use it. Also, this bridge connects a sparsely populated rural area to the local city, so bridge deterioration would impact a small number of people who live in that area.\n\nNow please rate your extent of endorsement for the idea Taylor voiced. Rate each of the following five statements separately on a five-point scale, where 1 = \"strongly disagree\" and 5 = \"strongly agree\". Give one number for every statement; do not give an overall or averaged score.",
+          "question": "I would support Taylor's idea when talking with my supervisor.",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "AMJ_1_3_B_q3",
+          "study_id": "AMJ_1_3",
+          "group": "B",
+          "group_n": 98,
+          "population": "managers evaluating an employee suggestion",
+          "item": 3,
+          "scenario": "Imagine you are a manager in a company. You will read a description of your organization and of an idea that one of your subordinates presented in a recent team meeting. Read the description carefully, adopt the role of the manager described in it, and then answer the questions that follow exactly as that manager would.\n\nThe ABS Engineering Company, located in Sacramento, is a civil engineering company that specializes in creating public bridges and tunnels across California. ABS has a corporate culture that emphasizes project efficiency and cost savings for its clients, so its employees seem to always complete their projects in time and under-budget. Once a month, the management team holds a meeting with employees to give updates on client projects and other office administrative issues. Then each manager splits off with his/her own project team to discuss specific project issues.\n\nYou are an engineering project manager at ABS and have been with the company for four years. During the most recent team meeting, Taylor, a junior engineer who has been with the firm for one year and reports to you, presented the following idea.\n\nTaylor's Idea\n\nOn the most recent bridge project, ABS used a new concrete mix product during construction that was cheaper than what they used to use, which helped their clients save money. However, after reading more outside research on the durability of this new product, Taylor believes that it may not last as long as ABS originally projected. Taylor feels that ABS needs to reinforce this latest bridge project in order to maintain ABS's reputation for excellence in the community.\n\nSpecifically, Taylor proposes that this bridge needs to be reinforced because faster-than-expected deterioration of the bridge would be visually unappealing to the people who use it. Also, this bridge connects a sparsely populated rural area to the local city, so bridge deterioration would impact a small number of people who live in that area.\n\nNow please rate your extent of endorsement for the idea Taylor voiced. Rate each of the following five statements separately on a five-point scale, where 1 = \"strongly disagree\" and 5 = \"strongly agree\". Give one number for every statement; do not give an overall or averaged score.",
+          "question": "I think Taylor's idea should be implemented.",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "AMJ_1_3_B_q4",
+          "study_id": "AMJ_1_3",
+          "group": "B",
+          "group_n": 98,
+          "population": "managers evaluating an employee suggestion",
+          "item": 4,
+          "scenario": "Imagine you are a manager in a company. You will read a description of your organization and of an idea that one of your subordinates presented in a recent team meeting. Read the description carefully, adopt the role of the manager described in it, and then answer the questions that follow exactly as that manager would.\n\nThe ABS Engineering Company, located in Sacramento, is a civil engineering company that specializes in creating public bridges and tunnels across California. ABS has a corporate culture that emphasizes project efficiency and cost savings for its clients, so its employees seem to always complete their projects in time and under-budget. Once a month, the management team holds a meeting with employees to give updates on client projects and other office administrative issues. Then each manager splits off with his/her own project team to discuss specific project issues.\n\nYou are an engineering project manager at ABS and have been with the company for four years. During the most recent team meeting, Taylor, a junior engineer who has been with the firm for one year and reports to you, presented the following idea.\n\nTaylor's Idea\n\nOn the most recent bridge project, ABS used a new concrete mix product during construction that was cheaper than what they used to use, which helped their clients save money. However, after reading more outside research on the durability of this new product, Taylor believes that it may not last as long as ABS originally projected. Taylor feels that ABS needs to reinforce this latest bridge project in order to maintain ABS's reputation for excellence in the community.\n\nSpecifically, Taylor proposes that this bridge needs to be reinforced because faster-than-expected deterioration of the bridge would be visually unappealing to the people who use it. Also, this bridge connects a sparsely populated rural area to the local city, so bridge deterioration would impact a small number of people who live in that area.\n\nNow please rate your extent of endorsement for the idea Taylor voiced. Rate each of the following five statements separately on a five-point scale, where 1 = \"strongly disagree\" and 5 = \"strongly agree\". Give one number for every statement; do not give an overall or averaged score.",
+          "question": "I agree with Taylor's idea.",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "AMJ_1_3_B_q5",
+          "study_id": "AMJ_1_3",
+          "group": "B",
+          "group_n": 98,
+          "population": "managers evaluating an employee suggestion",
+          "item": 5,
+          "scenario": "Imagine you are a manager in a company. You will read a description of your organization and of an idea that one of your subordinates presented in a recent team meeting. Read the description carefully, adopt the role of the manager described in it, and then answer the questions that follow exactly as that manager would.\n\nThe ABS Engineering Company, located in Sacramento, is a civil engineering company that specializes in creating public bridges and tunnels across California. ABS has a corporate culture that emphasizes project efficiency and cost savings for its clients, so its employees seem to always complete their projects in time and under-budget. Once a month, the management team holds a meeting with employees to give updates on client projects and other office administrative issues. Then each manager splits off with his/her own project team to discuss specific project issues.\n\nYou are an engineering project manager at ABS and have been with the company for four years. During the most recent team meeting, Taylor, a junior engineer who has been with the firm for one year and reports to you, presented the following idea.\n\nTaylor's Idea\n\nOn the most recent bridge project, ABS used a new concrete mix product during construction that was cheaper than what they used to use, which helped their clients save money. However, after reading more outside research on the durability of this new product, Taylor believes that it may not last as long as ABS originally projected. Taylor feels that ABS needs to reinforce this latest bridge project in order to maintain ABS's reputation for excellence in the community.\n\nSpecifically, Taylor proposes that this bridge needs to be reinforced because faster-than-expected deterioration of the bridge would be visually unappealing to the people who use it. Also, this bridge connects a sparsely populated rural area to the local city, so bridge deterioration would impact a small number of people who live in that area.\n\nNow please rate your extent of endorsement for the idea Taylor voiced. Rate each of the following five statements separately on a five-point scale, where 1 = \"strongly disagree\" and 5 = \"strongly agree\". Give one number for every statement; do not give an overall or averaged score.",
+          "question": "Taylor's idea is valuable.",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "AMJ_1_3_C_q1",
+          "study_id": "AMJ_1_3",
+          "group": "C",
+          "group_n": 51,
+          "population": "managers evaluating an employee suggestion",
+          "item": 1,
+          "scenario": "Imagine you are a manager in a company. You will read a description of your organization and of an idea that one of your subordinates presented in a recent team meeting. Read the description carefully, adopt the role of the manager described in it, and then answer the questions that follow exactly as that manager would.\n\nConstellation Limited, located in Dallas, Texas, is a company that specializes in tax accounting for public companies in the Southeastern United States. Constellation has a corporate culture emphasizing strong ethics and professionalism, and consequently, its employees stay very up to date on all new accounting standards in the industry. Once a month, the management team holds a meeting with employees to give updates on client trends, operational issues, and other office policy updates. Then each manager splits off with his/her own team to discuss specific team issues.\n\nYou are a manager at Constellation and have been with the company for four years. During the most recent team meeting, John, a junior tax accountant who has been with the firm for one year and reports to you, presented the following idea.\n\nJohn's Idea\n\nBecause only the more senior employees of the tax preparation team get to travel to clients to communicate in person, John feels like the lower-level employees are missing out on valuable client face time experience. Without any client face time during the first two years on the job, John believes that newer employees are not being trained well enough on client relationship management. Also, no travel in the first two years on the job paints an unrealistic picture of work as a tax accountant, which John believes leads to turnover once people begin to travel more frequently.\n\nSpecifically, John proposes that lower-level employees should travel with the senior employees to the client site for every project. The lower-level employees can shadow the senior employees while on site and eventually help communicate information to the client as well. This will require a significant investment in the travel budgets for each tax accounting team. In your team's case, this would mean an increase of 50% of your team's travel budget, a substantial increase in resources allocated to travel. John thinks the costs are justified in terms of better employee training and less future turnover.\n\nNow please rate your extent of endorsement for the idea John voiced. Rate each of the following five statements separately on a five-point scale, where 1 = \"strongly disagree\" and 5 = \"strongly agree\". Give one number for every statement; do not give an overall or averaged score.",
+          "question": "I would take John's idea to my supervisor.",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "AMJ_1_3_C_q2",
+          "study_id": "AMJ_1_3",
+          "group": "C",
+          "group_n": 51,
+          "population": "managers evaluating an employee suggestion",
+          "item": 2,
+          "scenario": "Imagine you are a manager in a company. You will read a description of your organization and of an idea that one of your subordinates presented in a recent team meeting. Read the description carefully, adopt the role of the manager described in it, and then answer the questions that follow exactly as that manager would.\n\nConstellation Limited, located in Dallas, Texas, is a company that specializes in tax accounting for public companies in the Southeastern United States. Constellation has a corporate culture emphasizing strong ethics and professionalism, and consequently, its employees stay very up to date on all new accounting standards in the industry. Once a month, the management team holds a meeting with employees to give updates on client trends, operational issues, and other office policy updates. Then each manager splits off with his/her own team to discuss specific team issues.\n\nYou are a manager at Constellation and have been with the company for four years. During the most recent team meeting, John, a junior tax accountant who has been with the firm for one year and reports to you, presented the following idea.\n\nJohn's Idea\n\nBecause only the more senior employees of the tax preparation team get to travel to clients to communicate in person, John feels like the lower-level employees are missing out on valuable client face time experience. Without any client face time during the first two years on the job, John believes that newer employees are not being trained well enough on client relationship management. Also, no travel in the first two years on the job paints an unrealistic picture of work as a tax accountant, which John believes leads to turnover once people begin to travel more frequently.\n\nSpecifically, John proposes that lower-level employees should travel with the senior employees to the client site for every project. The lower-level employees can shadow the senior employees while on site and eventually help communicate information to the client as well. This will require a significant investment in the travel budgets for each tax accounting team. In your team's case, this would mean an increase of 50% of your team's travel budget, a substantial increase in resources allocated to travel. John thinks the costs are justified in terms of better employee training and less future turnover.\n\nNow please rate your extent of endorsement for the idea John voiced. Rate each of the following five statements separately on a five-point scale, where 1 = \"strongly disagree\" and 5 = \"strongly agree\". Give one number for every statement; do not give an overall or averaged score.",
+          "question": "I would support John's idea when talking with my supervisor.",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "AMJ_1_3_C_q3",
+          "study_id": "AMJ_1_3",
+          "group": "C",
+          "group_n": 51,
+          "population": "managers evaluating an employee suggestion",
+          "item": 3,
+          "scenario": "Imagine you are a manager in a company. You will read a description of your organization and of an idea that one of your subordinates presented in a recent team meeting. Read the description carefully, adopt the role of the manager described in it, and then answer the questions that follow exactly as that manager would.\n\nConstellation Limited, located in Dallas, Texas, is a company that specializes in tax accounting for public companies in the Southeastern United States. Constellation has a corporate culture emphasizing strong ethics and professionalism, and consequently, its employees stay very up to date on all new accounting standards in the industry. Once a month, the management team holds a meeting with employees to give updates on client trends, operational issues, and other office policy updates. Then each manager splits off with his/her own team to discuss specific team issues.\n\nYou are a manager at Constellation and have been with the company for four years. During the most recent team meeting, John, a junior tax accountant who has been with the firm for one year and reports to you, presented the following idea.\n\nJohn's Idea\n\nBecause only the more senior employees of the tax preparation team get to travel to clients to communicate in person, John feels like the lower-level employees are missing out on valuable client face time experience. Without any client face time during the first two years on the job, John believes that newer employees are not being trained well enough on client relationship management. Also, no travel in the first two years on the job paints an unrealistic picture of work as a tax accountant, which John believes leads to turnover once people begin to travel more frequently.\n\nSpecifically, John proposes that lower-level employees should travel with the senior employees to the client site for every project. The lower-level employees can shadow the senior employees while on site and eventually help communicate information to the client as well. This will require a significant investment in the travel budgets for each tax accounting team. In your team's case, this would mean an increase of 50% of your team's travel budget, a substantial increase in resources allocated to travel. John thinks the costs are justified in terms of better employee training and less future turnover.\n\nNow please rate your extent of endorsement for the idea John voiced. Rate each of the following five statements separately on a five-point scale, where 1 = \"strongly disagree\" and 5 = \"strongly agree\". Give one number for every statement; do not give an overall or averaged score.",
+          "question": "I think John's idea should be implemented.",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "AMJ_1_3_C_q4",
+          "study_id": "AMJ_1_3",
+          "group": "C",
+          "group_n": 51,
+          "population": "managers evaluating an employee suggestion",
+          "item": 4,
+          "scenario": "Imagine you are a manager in a company. You will read a description of your organization and of an idea that one of your subordinates presented in a recent team meeting. Read the description carefully, adopt the role of the manager described in it, and then answer the questions that follow exactly as that manager would.\n\nConstellation Limited, located in Dallas, Texas, is a company that specializes in tax accounting for public companies in the Southeastern United States. Constellation has a corporate culture emphasizing strong ethics and professionalism, and consequently, its employees stay very up to date on all new accounting standards in the industry. Once a month, the management team holds a meeting with employees to give updates on client trends, operational issues, and other office policy updates. Then each manager splits off with his/her own team to discuss specific team issues.\n\nYou are a manager at Constellation and have been with the company for four years. During the most recent team meeting, John, a junior tax accountant who has been with the firm for one year and reports to you, presented the following idea.\n\nJohn's Idea\n\nBecause only the more senior employees of the tax preparation team get to travel to clients to communicate in person, John feels like the lower-level employees are missing out on valuable client face time experience. Without any client face time during the first two years on the job, John believes that newer employees are not being trained well enough on client relationship management. Also, no travel in the first two years on the job paints an unrealistic picture of work as a tax accountant, which John believes leads to turnover once people begin to travel more frequently.\n\nSpecifically, John proposes that lower-level employees should travel with the senior employees to the client site for every project. The lower-level employees can shadow the senior employees while on site and eventually help communicate information to the client as well. This will require a significant investment in the travel budgets for each tax accounting team. In your team's case, this would mean an increase of 50% of your team's travel budget, a substantial increase in resources allocated to travel. John thinks the costs are justified in terms of better employee training and less future turnover.\n\nNow please rate your extent of endorsement for the idea John voiced. Rate each of the following five statements separately on a five-point scale, where 1 = \"strongly disagree\" and 5 = \"strongly agree\". Give one number for every statement; do not give an overall or averaged score.",
+          "question": "I agree with John's idea.",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "AMJ_1_3_C_q5",
+          "study_id": "AMJ_1_3",
+          "group": "C",
+          "group_n": 51,
+          "population": "managers evaluating an employee suggestion",
+          "item": 5,
+          "scenario": "Imagine you are a manager in a company. You will read a description of your organization and of an idea that one of your subordinates presented in a recent team meeting. Read the description carefully, adopt the role of the manager described in it, and then answer the questions that follow exactly as that manager would.\n\nConstellation Limited, located in Dallas, Texas, is a company that specializes in tax accounting for public companies in the Southeastern United States. Constellation has a corporate culture emphasizing strong ethics and professionalism, and consequently, its employees stay very up to date on all new accounting standards in the industry. Once a month, the management team holds a meeting with employees to give updates on client trends, operational issues, and other office policy updates. Then each manager splits off with his/her own team to discuss specific team issues.\n\nYou are a manager at Constellation and have been with the company for four years. During the most recent team meeting, John, a junior tax accountant who has been with the firm for one year and reports to you, presented the following idea.\n\nJohn's Idea\n\nBecause only the more senior employees of the tax preparation team get to travel to clients to communicate in person, John feels like the lower-level employees are missing out on valuable client face time experience. Without any client face time during the first two years on the job, John believes that newer employees are not being trained well enough on client relationship management. Also, no travel in the first two years on the job paints an unrealistic picture of work as a tax accountant, which John believes leads to turnover once people begin to travel more frequently.\n\nSpecifically, John proposes that lower-level employees should travel with the senior employees to the client site for every project. The lower-level employees can shadow the senior employees while on site and eventually help communicate information to the client as well. This will require a significant investment in the travel budgets for each tax accounting team. In your team's case, this would mean an increase of 50% of your team's travel budget, a substantial increase in resources allocated to travel. John thinks the costs are justified in terms of better employee training and less future turnover.\n\nNow please rate your extent of endorsement for the idea John voiced. Rate each of the following five statements separately on a five-point scale, where 1 = \"strongly disagree\" and 5 = \"strongly agree\". Give one number for every statement; do not give an overall or averaged score.",
+          "question": "John's idea is valuable.",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "AMJ_1_3_D_q1",
+          "study_id": "AMJ_1_3",
+          "group": "D",
+          "group_n": 50,
+          "population": "managers evaluating an employee suggestion",
+          "item": 1,
+          "scenario": "Imagine you are a manager in a company. You will read a description of your organization and of an idea that one of your subordinates presented in a recent team meeting. Read the description carefully, adopt the role of the manager described in it, and then answer the questions that follow exactly as that manager would.\n\nConstellation Limited, located in Dallas, Texas, is a company that specializes in tax accounting for public companies in the Southeastern United States. Constellation has a corporate culture emphasizing strong ethics and professionalism, and consequently, its employees stay very up to date on all new accounting standards in the industry. Once a month, the management team holds a meeting with employees to give updates on client trends, operational issues, and other office policy updates. Then each manager splits off with his/her own team to discuss specific team issues.\n\nYou are a manager at Constellation and have been with the company for four years. During the most recent team meeting, John, a junior tax accountant who has been with the firm for one year and reports to you, presented the following idea.\n\nJohn's Idea\n\nBecause only the more senior employees of the tax preparation team get to travel to clients to communicate in person, John feels like the lower-level employees are missing out on valuable client face time experience. Without any client face time during the first two years on the job, John believes that newer employees are not being trained well enough on client relationship management. Also, no travel in the first two years on the job paints an unrealistic picture of work as a tax accountant, which John believes leads to turnover once people begin to travel more frequently.\n\nSpecifically, John proposes that only one lower-level employee from the project team should travel with the senior employees to the client site at the very end of every project. This lower-level employee can shadow a senior employee while on site and take notes to share with the other lower-level team members once they return to Dallas. Client managers would ensure that each lower-level employee gets on-site experience at least once in their two years. This will require a very small increase in the team's travel budget. In your team's case, this would mean an increase of only 5% of your team's travel budget, a very small increase in resources allocated to travel. John thinks that the costs are justified in terms of better employee training and less future turnover.\n\nNow please rate your extent of endorsement for the idea John voiced. Rate each of the following five statements separately on a five-point scale, where 1 = \"strongly disagree\" and 5 = \"strongly agree\". Give one number for every statement; do not give an overall or averaged score.",
+          "question": "I would take John's idea to my supervisor.",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "AMJ_1_3_D_q2",
+          "study_id": "AMJ_1_3",
+          "group": "D",
+          "group_n": 50,
+          "population": "managers evaluating an employee suggestion",
+          "item": 2,
+          "scenario": "Imagine you are a manager in a company. You will read a description of your organization and of an idea that one of your subordinates presented in a recent team meeting. Read the description carefully, adopt the role of the manager described in it, and then answer the questions that follow exactly as that manager would.\n\nConstellation Limited, located in Dallas, Texas, is a company that specializes in tax accounting for public companies in the Southeastern United States. Constellation has a corporate culture emphasizing strong ethics and professionalism, and consequently, its employees stay very up to date on all new accounting standards in the industry. Once a month, the management team holds a meeting with employees to give updates on client trends, operational issues, and other office policy updates. Then each manager splits off with his/her own team to discuss specific team issues.\n\nYou are a manager at Constellation and have been with the company for four years. During the most recent team meeting, John, a junior tax accountant who has been with the firm for one year and reports to you, presented the following idea.\n\nJohn's Idea\n\nBecause only the more senior employees of the tax preparation team get to travel to clients to communicate in person, John feels like the lower-level employees are missing out on valuable client face time experience. Without any client face time during the first two years on the job, John believes that newer employees are not being trained well enough on client relationship management. Also, no travel in the first two years on the job paints an unrealistic picture of work as a tax accountant, which John believes leads to turnover once people begin to travel more frequently.\n\nSpecifically, John proposes that only one lower-level employee from the project team should travel with the senior employees to the client site at the very end of every project. This lower-level employee can shadow a senior employee while on site and take notes to share with the other lower-level team members once they return to Dallas. Client managers would ensure that each lower-level employee gets on-site experience at least once in their two years. This will require a very small increase in the team's travel budget. In your team's case, this would mean an increase of only 5% of your team's travel budget, a very small increase in resources allocated to travel. John thinks that the costs are justified in terms of better employee training and less future turnover.\n\nNow please rate your extent of endorsement for the idea John voiced. Rate each of the following five statements separately on a five-point scale, where 1 = \"strongly disagree\" and 5 = \"strongly agree\". Give one number for every statement; do not give an overall or averaged score.",
+          "question": "I would support John's idea when talking with my supervisor.",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "AMJ_1_3_D_q3",
+          "study_id": "AMJ_1_3",
+          "group": "D",
+          "group_n": 50,
+          "population": "managers evaluating an employee suggestion",
+          "item": 3,
+          "scenario": "Imagine you are a manager in a company. You will read a description of your organization and of an idea that one of your subordinates presented in a recent team meeting. Read the description carefully, adopt the role of the manager described in it, and then answer the questions that follow exactly as that manager would.\n\nConstellation Limited, located in Dallas, Texas, is a company that specializes in tax accounting for public companies in the Southeastern United States. Constellation has a corporate culture emphasizing strong ethics and professionalism, and consequently, its employees stay very up to date on all new accounting standards in the industry. Once a month, the management team holds a meeting with employees to give updates on client trends, operational issues, and other office policy updates. Then each manager splits off with his/her own team to discuss specific team issues.\n\nYou are a manager at Constellation and have been with the company for four years. During the most recent team meeting, John, a junior tax accountant who has been with the firm for one year and reports to you, presented the following idea.\n\nJohn's Idea\n\nBecause only the more senior employees of the tax preparation team get to travel to clients to communicate in person, John feels like the lower-level employees are missing out on valuable client face time experience. Without any client face time during the first two years on the job, John believes that newer employees are not being trained well enough on client relationship management. Also, no travel in the first two years on the job paints an unrealistic picture of work as a tax accountant, which John believes leads to turnover once people begin to travel more frequently.\n\nSpecifically, John proposes that only one lower-level employee from the project team should travel with the senior employees to the client site at the very end of every project. This lower-level employee can shadow a senior employee while on site and take notes to share with the other lower-level team members once they return to Dallas. Client managers would ensure that each lower-level employee gets on-site experience at least once in their two years. This will require a very small increase in the team's travel budget. In your team's case, this would mean an increase of only 5% of your team's travel budget, a very small increase in resources allocated to travel. John thinks that the costs are justified in terms of better employee training and less future turnover.\n\nNow please rate your extent of endorsement for the idea John voiced. Rate each of the following five statements separately on a five-point scale, where 1 = \"strongly disagree\" and 5 = \"strongly agree\". Give one number for every statement; do not give an overall or averaged score.",
+          "question": "I think John's idea should be implemented.",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "AMJ_1_3_D_q4",
+          "study_id": "AMJ_1_3",
+          "group": "D",
+          "group_n": 50,
+          "population": "managers evaluating an employee suggestion",
+          "item": 4,
+          "scenario": "Imagine you are a manager in a company. You will read a description of your organization and of an idea that one of your subordinates presented in a recent team meeting. Read the description carefully, adopt the role of the manager described in it, and then answer the questions that follow exactly as that manager would.\n\nConstellation Limited, located in Dallas, Texas, is a company that specializes in tax accounting for public companies in the Southeastern United States. Constellation has a corporate culture emphasizing strong ethics and professionalism, and consequently, its employees stay very up to date on all new accounting standards in the industry. Once a month, the management team holds a meeting with employees to give updates on client trends, operational issues, and other office policy updates. Then each manager splits off with his/her own team to discuss specific team issues.\n\nYou are a manager at Constellation and have been with the company for four years. During the most recent team meeting, John, a junior tax accountant who has been with the firm for one year and reports to you, presented the following idea.\n\nJohn's Idea\n\nBecause only the more senior employees of the tax preparation team get to travel to clients to communicate in person, John feels like the lower-level employees are missing out on valuable client face time experience. Without any client face time during the first two years on the job, John believes that newer employees are not being trained well enough on client relationship management. Also, no travel in the first two years on the job paints an unrealistic picture of work as a tax accountant, which John believes leads to turnover once people begin to travel more frequently.\n\nSpecifically, John proposes that only one lower-level employee from the project team should travel with the senior employees to the client site at the very end of every project. This lower-level employee can shadow a senior employee while on site and take notes to share with the other lower-level team members once they return to Dallas. Client managers would ensure that each lower-level employee gets on-site experience at least once in their two years. This will require a very small increase in the team's travel budget. In your team's case, this would mean an increase of only 5% of your team's travel budget, a very small increase in resources allocated to travel. John thinks that the costs are justified in terms of better employee training and less future turnover.\n\nNow please rate your extent of endorsement for the idea John voiced. Rate each of the following five statements separately on a five-point scale, where 1 = \"strongly disagree\" and 5 = \"strongly agree\". Give one number for every statement; do not give an overall or averaged score.",
+          "question": "I agree with John's idea.",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "AMJ_1_3_D_q5",
+          "study_id": "AMJ_1_3",
+          "group": "D",
+          "group_n": 50,
+          "population": "managers evaluating an employee suggestion",
+          "item": 5,
+          "scenario": "Imagine you are a manager in a company. You will read a description of your organization and of an idea that one of your subordinates presented in a recent team meeting. Read the description carefully, adopt the role of the manager described in it, and then answer the questions that follow exactly as that manager would.\n\nConstellation Limited, located in Dallas, Texas, is a company that specializes in tax accounting for public companies in the Southeastern United States. Constellation has a corporate culture emphasizing strong ethics and professionalism, and consequently, its employees stay very up to date on all new accounting standards in the industry. Once a month, the management team holds a meeting with employees to give updates on client trends, operational issues, and other office policy updates. Then each manager splits off with his/her own team to discuss specific team issues.\n\nYou are a manager at Constellation and have been with the company for four years. During the most recent team meeting, John, a junior tax accountant who has been with the firm for one year and reports to you, presented the following idea.\n\nJohn's Idea\n\nBecause only the more senior employees of the tax preparation team get to travel to clients to communicate in person, John feels like the lower-level employees are missing out on valuable client face time experience. Without any client face time during the first two years on the job, John believes that newer employees are not being trained well enough on client relationship management. Also, no travel in the first two years on the job paints an unrealistic picture of work as a tax accountant, which John believes leads to turnover once people begin to travel more frequently.\n\nSpecifically, John proposes that only one lower-level employee from the project team should travel with the senior employees to the client site at the very end of every project. This lower-level employee can shadow a senior employee while on site and take notes to share with the other lower-level team members once they return to Dallas. Client managers would ensure that each lower-level employee gets on-site experience at least once in their two years. This will require a very small increase in the team's travel budget. In your team's case, this would mean an increase of only 5% of your team's travel budget, a very small increase in resources allocated to travel. John thinks that the costs are justified in terms of better employee training and less future turnover.\n\nNow please rate your extent of endorsement for the idea John voiced. Rate each of the following five statements separately on a five-point scale, where 1 = \"strongly disagree\" and 5 = \"strongly agree\". Give one number for every statement; do not give an overall or averaged score.",
+          "question": "John's idea is valuable.",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "AMJ_1_3_E_q1",
+          "study_id": "AMJ_1_3",
+          "group": "E",
+          "group_n": 50,
+          "population": "managers evaluating an employee suggestion",
+          "item": 1,
+          "scenario": "Imagine you are a manager in a company. You will read a description of your organization and of an idea that one of your subordinates presented in a recent team meeting. Read the description carefully, adopt the role of the manager described in it, and then answer the questions that follow exactly as that manager would.\n\nSilver Creek Associates, headquartered in Boston, Massachusetts, is a consulting company that specializes in marketing and sales-focused projects for businesses all along the east coast. To be closer to its clients, Silver Creek has four additional locations in other major cities along the east coast. Silver Creek has a corporate culture emphasizing going the extra mile for the client and solving tough problems, so its consultants have outstanding client relationships. Once a month, the management team at each of the five office locations holds a meeting with local employees to give updates on client projects, operational issues, and other office policy updates. Then each manager splits off with his/her own team to discuss specific team issues.\n\nYou are a manager at the Silver Creek Associates' office in Philadelphia and have been with the company for four years. During the most recent team meeting, Michelle, a junior analyst whom you are managing and has been with the firm for one year, presented the following idea.\n\nMichelle's Idea\n\nBecause a large portion of the client base for Silver Creek, especially in the Philadelphia office, is made up of family-owned businesses with unique business practices, employees often find the company's main online client management system inadequate. Michelle feels that Silver Creek should use a different client management system that is more customizable. This would allow for more detailed information storage on clients. Further, the one Michelle recommends is comparably priced per month with the current system, with no additional fees required. Michelle states that currently employees waste time continually trying to relearn the ins and outs of each client through disorganized notes from prior consultants that are not easily accessible via the current client management system. These concerns limit employees' ability to quickly brief themselves about the client while traveling, leading to inefficiencies and difficult client interactions.\n\nSpecifically, Michelle proposes that all of the Silver Creek Associates offices should simultaneously switch to the different client management system. This would address the limitations of the current system with the added benefit of allowing each location access to the history on all of the other locations' clients. Switching to the new system at all Silver Creek offices will require a significant amount of coordination between the five different Silver Creek office locations. In order to ensure comprehensive and up-to-date information for each client and a seamless transition, all five office directors will need to first approve the new system and then agree to the same timeline for roll out. Once this is complete all Silver Creek employees would need to be trained on the new client management system in the same time frame. Michelle thinks the idea is worth the coordination effort because it will improve client service and consequently client satisfaction.\n\nNow please rate your extent of endorsement for the idea Michelle voiced. Rate each of the following five statements separately on a five-point scale, where 1 = \"strongly disagree\" and 5 = \"strongly agree\". Give one number for every statement; do not give an overall or averaged score.",
+          "question": "I would take Michelle's idea to my supervisor.",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "AMJ_1_3_E_q2",
+          "study_id": "AMJ_1_3",
+          "group": "E",
+          "group_n": 50,
+          "population": "managers evaluating an employee suggestion",
+          "item": 2,
+          "scenario": "Imagine you are a manager in a company. You will read a description of your organization and of an idea that one of your subordinates presented in a recent team meeting. Read the description carefully, adopt the role of the manager described in it, and then answer the questions that follow exactly as that manager would.\n\nSilver Creek Associates, headquartered in Boston, Massachusetts, is a consulting company that specializes in marketing and sales-focused projects for businesses all along the east coast. To be closer to its clients, Silver Creek has four additional locations in other major cities along the east coast. Silver Creek has a corporate culture emphasizing going the extra mile for the client and solving tough problems, so its consultants have outstanding client relationships. Once a month, the management team at each of the five office locations holds a meeting with local employees to give updates on client projects, operational issues, and other office policy updates. Then each manager splits off with his/her own team to discuss specific team issues.\n\nYou are a manager at the Silver Creek Associates' office in Philadelphia and have been with the company for four years. During the most recent team meeting, Michelle, a junior analyst whom you are managing and has been with the firm for one year, presented the following idea.\n\nMichelle's Idea\n\nBecause a large portion of the client base for Silver Creek, especially in the Philadelphia office, is made up of family-owned businesses with unique business practices, employees often find the company's main online client management system inadequate. Michelle feels that Silver Creek should use a different client management system that is more customizable. This would allow for more detailed information storage on clients. Further, the one Michelle recommends is comparably priced per month with the current system, with no additional fees required. Michelle states that currently employees waste time continually trying to relearn the ins and outs of each client through disorganized notes from prior consultants that are not easily accessible via the current client management system. These concerns limit employees' ability to quickly brief themselves about the client while traveling, leading to inefficiencies and difficult client interactions.\n\nSpecifically, Michelle proposes that all of the Silver Creek Associates offices should simultaneously switch to the different client management system. This would address the limitations of the current system with the added benefit of allowing each location access to the history on all of the other locations' clients. Switching to the new system at all Silver Creek offices will require a significant amount of coordination between the five different Silver Creek office locations. In order to ensure comprehensive and up-to-date information for each client and a seamless transition, all five office directors will need to first approve the new system and then agree to the same timeline for roll out. Once this is complete all Silver Creek employees would need to be trained on the new client management system in the same time frame. Michelle thinks the idea is worth the coordination effort because it will improve client service and consequently client satisfaction.\n\nNow please rate your extent of endorsement for the idea Michelle voiced. Rate each of the following five statements separately on a five-point scale, where 1 = \"strongly disagree\" and 5 = \"strongly agree\". Give one number for every statement; do not give an overall or averaged score.",
+          "question": "I would support Michelle's idea when talking with my supervisor.",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "AMJ_1_3_E_q3",
+          "study_id": "AMJ_1_3",
+          "group": "E",
+          "group_n": 50,
+          "population": "managers evaluating an employee suggestion",
+          "item": 3,
+          "scenario": "Imagine you are a manager in a company. You will read a description of your organization and of an idea that one of your subordinates presented in a recent team meeting. Read the description carefully, adopt the role of the manager described in it, and then answer the questions that follow exactly as that manager would.\n\nSilver Creek Associates, headquartered in Boston, Massachusetts, is a consulting company that specializes in marketing and sales-focused projects for businesses all along the east coast. To be closer to its clients, Silver Creek has four additional locations in other major cities along the east coast. Silver Creek has a corporate culture emphasizing going the extra mile for the client and solving tough problems, so its consultants have outstanding client relationships. Once a month, the management team at each of the five office locations holds a meeting with local employees to give updates on client projects, operational issues, and other office policy updates. Then each manager splits off with his/her own team to discuss specific team issues.\n\nYou are a manager at the Silver Creek Associates' office in Philadelphia and have been with the company for four years. During the most recent team meeting, Michelle, a junior analyst whom you are managing and has been with the firm for one year, presented the following idea.\n\nMichelle's Idea\n\nBecause a large portion of the client base for Silver Creek, especially in the Philadelphia office, is made up of family-owned businesses with unique business practices, employees often find the company's main online client management system inadequate. Michelle feels that Silver Creek should use a different client management system that is more customizable. This would allow for more detailed information storage on clients. Further, the one Michelle recommends is comparably priced per month with the current system, with no additional fees required. Michelle states that currently employees waste time continually trying to relearn the ins and outs of each client through disorganized notes from prior consultants that are not easily accessible via the current client management system. These concerns limit employees' ability to quickly brief themselves about the client while traveling, leading to inefficiencies and difficult client interactions.\n\nSpecifically, Michelle proposes that all of the Silver Creek Associates offices should simultaneously switch to the different client management system. This would address the limitations of the current system with the added benefit of allowing each location access to the history on all of the other locations' clients. Switching to the new system at all Silver Creek offices will require a significant amount of coordination between the five different Silver Creek office locations. In order to ensure comprehensive and up-to-date information for each client and a seamless transition, all five office directors will need to first approve the new system and then agree to the same timeline for roll out. Once this is complete all Silver Creek employees would need to be trained on the new client management system in the same time frame. Michelle thinks the idea is worth the coordination effort because it will improve client service and consequently client satisfaction.\n\nNow please rate your extent of endorsement for the idea Michelle voiced. Rate each of the following five statements separately on a five-point scale, where 1 = \"strongly disagree\" and 5 = \"strongly agree\". Give one number for every statement; do not give an overall or averaged score.",
+          "question": "I think Michelle's idea should be implemented.",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "AMJ_1_3_E_q4",
+          "study_id": "AMJ_1_3",
+          "group": "E",
+          "group_n": 50,
+          "population": "managers evaluating an employee suggestion",
+          "item": 4,
+          "scenario": "Imagine you are a manager in a company. You will read a description of your organization and of an idea that one of your subordinates presented in a recent team meeting. Read the description carefully, adopt the role of the manager described in it, and then answer the questions that follow exactly as that manager would.\n\nSilver Creek Associates, headquartered in Boston, Massachusetts, is a consulting company that specializes in marketing and sales-focused projects for businesses all along the east coast. To be closer to its clients, Silver Creek has four additional locations in other major cities along the east coast. Silver Creek has a corporate culture emphasizing going the extra mile for the client and solving tough problems, so its consultants have outstanding client relationships. Once a month, the management team at each of the five office locations holds a meeting with local employees to give updates on client projects, operational issues, and other office policy updates. Then each manager splits off with his/her own team to discuss specific team issues.\n\nYou are a manager at the Silver Creek Associates' office in Philadelphia and have been with the company for four years. During the most recent team meeting, Michelle, a junior analyst whom you are managing and has been with the firm for one year, presented the following idea.\n\nMichelle's Idea\n\nBecause a large portion of the client base for Silver Creek, especially in the Philadelphia office, is made up of family-owned businesses with unique business practices, employees often find the company's main online client management system inadequate. Michelle feels that Silver Creek should use a different client management system that is more customizable. This would allow for more detailed information storage on clients. Further, the one Michelle recommends is comparably priced per month with the current system, with no additional fees required. Michelle states that currently employees waste time continually trying to relearn the ins and outs of each client through disorganized notes from prior consultants that are not easily accessible via the current client management system. These concerns limit employees' ability to quickly brief themselves about the client while traveling, leading to inefficiencies and difficult client interactions.\n\nSpecifically, Michelle proposes that all of the Silver Creek Associates offices should simultaneously switch to the different client management system. This would address the limitations of the current system with the added benefit of allowing each location access to the history on all of the other locations' clients. Switching to the new system at all Silver Creek offices will require a significant amount of coordination between the five different Silver Creek office locations. In order to ensure comprehensive and up-to-date information for each client and a seamless transition, all five office directors will need to first approve the new system and then agree to the same timeline for roll out. Once this is complete all Silver Creek employees would need to be trained on the new client management system in the same time frame. Michelle thinks the idea is worth the coordination effort because it will improve client service and consequently client satisfaction.\n\nNow please rate your extent of endorsement for the idea Michelle voiced. Rate each of the following five statements separately on a five-point scale, where 1 = \"strongly disagree\" and 5 = \"strongly agree\". Give one number for every statement; do not give an overall or averaged score.",
+          "question": "I agree with Michelle's idea.",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "AMJ_1_3_E_q5",
+          "study_id": "AMJ_1_3",
+          "group": "E",
+          "group_n": 50,
+          "population": "managers evaluating an employee suggestion",
+          "item": 5,
+          "scenario": "Imagine you are a manager in a company. You will read a description of your organization and of an idea that one of your subordinates presented in a recent team meeting. Read the description carefully, adopt the role of the manager described in it, and then answer the questions that follow exactly as that manager would.\n\nSilver Creek Associates, headquartered in Boston, Massachusetts, is a consulting company that specializes in marketing and sales-focused projects for businesses all along the east coast. To be closer to its clients, Silver Creek has four additional locations in other major cities along the east coast. Silver Creek has a corporate culture emphasizing going the extra mile for the client and solving tough problems, so its consultants have outstanding client relationships. Once a month, the management team at each of the five office locations holds a meeting with local employees to give updates on client projects, operational issues, and other office policy updates. Then each manager splits off with his/her own team to discuss specific team issues.\n\nYou are a manager at the Silver Creek Associates' office in Philadelphia and have been with the company for four years. During the most recent team meeting, Michelle, a junior analyst whom you are managing and has been with the firm for one year, presented the following idea.\n\nMichelle's Idea\n\nBecause a large portion of the client base for Silver Creek, especially in the Philadelphia office, is made up of family-owned businesses with unique business practices, employees often find the company's main online client management system inadequate. Michelle feels that Silver Creek should use a different client management system that is more customizable. This would allow for more detailed information storage on clients. Further, the one Michelle recommends is comparably priced per month with the current system, with no additional fees required. Michelle states that currently employees waste time continually trying to relearn the ins and outs of each client through disorganized notes from prior consultants that are not easily accessible via the current client management system. These concerns limit employees' ability to quickly brief themselves about the client while traveling, leading to inefficiencies and difficult client interactions.\n\nSpecifically, Michelle proposes that all of the Silver Creek Associates offices should simultaneously switch to the different client management system. This would address the limitations of the current system with the added benefit of allowing each location access to the history on all of the other locations' clients. Switching to the new system at all Silver Creek offices will require a significant amount of coordination between the five different Silver Creek office locations. In order to ensure comprehensive and up-to-date information for each client and a seamless transition, all five office directors will need to first approve the new system and then agree to the same timeline for roll out. Once this is complete all Silver Creek employees would need to be trained on the new client management system in the same time frame. Michelle thinks the idea is worth the coordination effort because it will improve client service and consequently client satisfaction.\n\nNow please rate your extent of endorsement for the idea Michelle voiced. Rate each of the following five statements separately on a five-point scale, where 1 = \"strongly disagree\" and 5 = \"strongly agree\". Give one number for every statement; do not give an overall or averaged score.",
+          "question": "Michelle's idea is valuable.",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "AMJ_1_3_F_q1",
+          "study_id": "AMJ_1_3",
+          "group": "F",
+          "group_n": 49,
+          "population": "managers evaluating an employee suggestion",
+          "item": 1,
+          "scenario": "Imagine you are a manager in a company. You will read a description of your organization and of an idea that one of your subordinates presented in a recent team meeting. Read the description carefully, adopt the role of the manager described in it, and then answer the questions that follow exactly as that manager would.\n\nSilver Creek Associates, headquartered in Boston, Massachusetts, is a consulting company that specializes in marketing and sales-focused projects for businesses all along the east coast. To be closer to its clients, Silver Creek has four additional locations in other major cities along the east coast. Silver Creek has a corporate culture emphasizing going the extra mile for the client and solving tough problems, so its consultants have outstanding client relationships. Once a month, the management team at each of the five office locations holds a meeting with local employees to give updates on client projects, operational issues, and other office policy updates. Then each manager splits off with his/her own team to discuss specific team issues.\n\nYou are a manager at the Silver Creek Associates' office in Philadelphia and have been with the company for four years. During the most recent team meeting, Michelle, a junior analyst whom you are managing and has been with the firm for one year, presented the following idea.\n\nMichelle's Idea\n\nBecause a large portion of the client base for Silver Creek, especially in the Philadelphia office, is made up of family-owned businesses with unique business practices, employees often find the company's main online client management system inadequate. Michelle feels that Silver Creek should use a different client management system that is more customizable. This would allow for more detailed information storage on clients. Further, the one Michelle recommends is comparably priced per month with the current system, with no additional fees required. Michelle states that currently employees waste time continually trying to relearn the ins and outs of each client through disorganized notes from prior consultants that are not easily accessible via the current client management system. These concerns limit employees' ability to quickly brief themselves about the client while traveling, leading to inefficiencies and difficult client interactions.\n\nSpecifically, given this is an issue mostly for the Philadelphia office, Michelle proposes that only the Philadelphia office should switch to the different client management system. This would address the limitations of the current system in the Philadelphia office. Switching to the new system at only the Philadelphia office will require very little coordination between the five different Silver Creek office locations. Only the Philadelphia office director will need to approve the new system and develop a roll out timeline based on his or her sole preferences. Once this is set, only the Silver Creek employees working in Philadelphia would need to be trained on the new client management system. Michelle thinks the idea is worth the effort because it will improve client service and consequently client satisfaction.\n\nNow please rate your extent of endorsement for the idea Michelle voiced. Rate each of the following five statements separately on a five-point scale, where 1 = \"strongly disagree\" and 5 = \"strongly agree\". Give one number for every statement; do not give an overall or averaged score.",
+          "question": "I would take Michelle's idea to my supervisor.",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "AMJ_1_3_F_q2",
+          "study_id": "AMJ_1_3",
+          "group": "F",
+          "group_n": 49,
+          "population": "managers evaluating an employee suggestion",
+          "item": 2,
+          "scenario": "Imagine you are a manager in a company. You will read a description of your organization and of an idea that one of your subordinates presented in a recent team meeting. Read the description carefully, adopt the role of the manager described in it, and then answer the questions that follow exactly as that manager would.\n\nSilver Creek Associates, headquartered in Boston, Massachusetts, is a consulting company that specializes in marketing and sales-focused projects for businesses all along the east coast. To be closer to its clients, Silver Creek has four additional locations in other major cities along the east coast. Silver Creek has a corporate culture emphasizing going the extra mile for the client and solving tough problems, so its consultants have outstanding client relationships. Once a month, the management team at each of the five office locations holds a meeting with local employees to give updates on client projects, operational issues, and other office policy updates. Then each manager splits off with his/her own team to discuss specific team issues.\n\nYou are a manager at the Silver Creek Associates' office in Philadelphia and have been with the company for four years. During the most recent team meeting, Michelle, a junior analyst whom you are managing and has been with the firm for one year, presented the following idea.\n\nMichelle's Idea\n\nBecause a large portion of the client base for Silver Creek, especially in the Philadelphia office, is made up of family-owned businesses with unique business practices, employees often find the company's main online client management system inadequate. Michelle feels that Silver Creek should use a different client management system that is more customizable. This would allow for more detailed information storage on clients. Further, the one Michelle recommends is comparably priced per month with the current system, with no additional fees required. Michelle states that currently employees waste time continually trying to relearn the ins and outs of each client through disorganized notes from prior consultants that are not easily accessible via the current client management system. These concerns limit employees' ability to quickly brief themselves about the client while traveling, leading to inefficiencies and difficult client interactions.\n\nSpecifically, given this is an issue mostly for the Philadelphia office, Michelle proposes that only the Philadelphia office should switch to the different client management system. This would address the limitations of the current system in the Philadelphia office. Switching to the new system at only the Philadelphia office will require very little coordination between the five different Silver Creek office locations. Only the Philadelphia office director will need to approve the new system and develop a roll out timeline based on his or her sole preferences. Once this is set, only the Silver Creek employees working in Philadelphia would need to be trained on the new client management system. Michelle thinks the idea is worth the effort because it will improve client service and consequently client satisfaction.\n\nNow please rate your extent of endorsement for the idea Michelle voiced. Rate each of the following five statements separately on a five-point scale, where 1 = \"strongly disagree\" and 5 = \"strongly agree\". Give one number for every statement; do not give an overall or averaged score.",
+          "question": "I would support Michelle's idea when talking with my supervisor.",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "AMJ_1_3_F_q3",
+          "study_id": "AMJ_1_3",
+          "group": "F",
+          "group_n": 49,
+          "population": "managers evaluating an employee suggestion",
+          "item": 3,
+          "scenario": "Imagine you are a manager in a company. You will read a description of your organization and of an idea that one of your subordinates presented in a recent team meeting. Read the description carefully, adopt the role of the manager described in it, and then answer the questions that follow exactly as that manager would.\n\nSilver Creek Associates, headquartered in Boston, Massachusetts, is a consulting company that specializes in marketing and sales-focused projects for businesses all along the east coast. To be closer to its clients, Silver Creek has four additional locations in other major cities along the east coast. Silver Creek has a corporate culture emphasizing going the extra mile for the client and solving tough problems, so its consultants have outstanding client relationships. Once a month, the management team at each of the five office locations holds a meeting with local employees to give updates on client projects, operational issues, and other office policy updates. Then each manager splits off with his/her own team to discuss specific team issues.\n\nYou are a manager at the Silver Creek Associates' office in Philadelphia and have been with the company for four years. During the most recent team meeting, Michelle, a junior analyst whom you are managing and has been with the firm for one year, presented the following idea.\n\nMichelle's Idea\n\nBecause a large portion of the client base for Silver Creek, especially in the Philadelphia office, is made up of family-owned businesses with unique business practices, employees often find the company's main online client management system inadequate. Michelle feels that Silver Creek should use a different client management system that is more customizable. This would allow for more detailed information storage on clients. Further, the one Michelle recommends is comparably priced per month with the current system, with no additional fees required. Michelle states that currently employees waste time continually trying to relearn the ins and outs of each client through disorganized notes from prior consultants that are not easily accessible via the current client management system. These concerns limit employees' ability to quickly brief themselves about the client while traveling, leading to inefficiencies and difficult client interactions.\n\nSpecifically, given this is an issue mostly for the Philadelphia office, Michelle proposes that only the Philadelphia office should switch to the different client management system. This would address the limitations of the current system in the Philadelphia office. Switching to the new system at only the Philadelphia office will require very little coordination between the five different Silver Creek office locations. Only the Philadelphia office director will need to approve the new system and develop a roll out timeline based on his or her sole preferences. Once this is set, only the Silver Creek employees working in Philadelphia would need to be trained on the new client management system. Michelle thinks the idea is worth the effort because it will improve client service and consequently client satisfaction.\n\nNow please rate your extent of endorsement for the idea Michelle voiced. Rate each of the following five statements separately on a five-point scale, where 1 = \"strongly disagree\" and 5 = \"strongly agree\". Give one number for every statement; do not give an overall or averaged score.",
+          "question": "I think Michelle's idea should be implemented.",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "AMJ_1_3_F_q4",
+          "study_id": "AMJ_1_3",
+          "group": "F",
+          "group_n": 49,
+          "population": "managers evaluating an employee suggestion",
+          "item": 4,
+          "scenario": "Imagine you are a manager in a company. You will read a description of your organization and of an idea that one of your subordinates presented in a recent team meeting. Read the description carefully, adopt the role of the manager described in it, and then answer the questions that follow exactly as that manager would.\n\nSilver Creek Associates, headquartered in Boston, Massachusetts, is a consulting company that specializes in marketing and sales-focused projects for businesses all along the east coast. To be closer to its clients, Silver Creek has four additional locations in other major cities along the east coast. Silver Creek has a corporate culture emphasizing going the extra mile for the client and solving tough problems, so its consultants have outstanding client relationships. Once a month, the management team at each of the five office locations holds a meeting with local employees to give updates on client projects, operational issues, and other office policy updates. Then each manager splits off with his/her own team to discuss specific team issues.\n\nYou are a manager at the Silver Creek Associates' office in Philadelphia and have been with the company for four years. During the most recent team meeting, Michelle, a junior analyst whom you are managing and has been with the firm for one year, presented the following idea.\n\nMichelle's Idea\n\nBecause a large portion of the client base for Silver Creek, especially in the Philadelphia office, is made up of family-owned businesses with unique business practices, employees often find the company's main online client management system inadequate. Michelle feels that Silver Creek should use a different client management system that is more customizable. This would allow for more detailed information storage on clients. Further, the one Michelle recommends is comparably priced per month with the current system, with no additional fees required. Michelle states that currently employees waste time continually trying to relearn the ins and outs of each client through disorganized notes from prior consultants that are not easily accessible via the current client management system. These concerns limit employees' ability to quickly brief themselves about the client while traveling, leading to inefficiencies and difficult client interactions.\n\nSpecifically, given this is an issue mostly for the Philadelphia office, Michelle proposes that only the Philadelphia office should switch to the different client management system. This would address the limitations of the current system in the Philadelphia office. Switching to the new system at only the Philadelphia office will require very little coordination between the five different Silver Creek office locations. Only the Philadelphia office director will need to approve the new system and develop a roll out timeline based on his or her sole preferences. Once this is set, only the Silver Creek employees working in Philadelphia would need to be trained on the new client management system. Michelle thinks the idea is worth the effort because it will improve client service and consequently client satisfaction.\n\nNow please rate your extent of endorsement for the idea Michelle voiced. Rate each of the following five statements separately on a five-point scale, where 1 = \"strongly disagree\" and 5 = \"strongly agree\". Give one number for every statement; do not give an overall or averaged score.",
+          "question": "I agree with Michelle's idea.",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "AMJ_1_3_F_q5",
+          "study_id": "AMJ_1_3",
+          "group": "F",
+          "group_n": 49,
+          "population": "managers evaluating an employee suggestion",
+          "item": 5,
+          "scenario": "Imagine you are a manager in a company. You will read a description of your organization and of an idea that one of your subordinates presented in a recent team meeting. Read the description carefully, adopt the role of the manager described in it, and then answer the questions that follow exactly as that manager would.\n\nSilver Creek Associates, headquartered in Boston, Massachusetts, is a consulting company that specializes in marketing and sales-focused projects for businesses all along the east coast. To be closer to its clients, Silver Creek has four additional locations in other major cities along the east coast. Silver Creek has a corporate culture emphasizing going the extra mile for the client and solving tough problems, so its consultants have outstanding client relationships. Once a month, the management team at each of the five office locations holds a meeting with local employees to give updates on client projects, operational issues, and other office policy updates. Then each manager splits off with his/her own team to discuss specific team issues.\n\nYou are a manager at the Silver Creek Associates' office in Philadelphia and have been with the company for four years. During the most recent team meeting, Michelle, a junior analyst whom you are managing and has been with the firm for one year, presented the following idea.\n\nMichelle's Idea\n\nBecause a large portion of the client base for Silver Creek, especially in the Philadelphia office, is made up of family-owned businesses with unique business practices, employees often find the company's main online client management system inadequate. Michelle feels that Silver Creek should use a different client management system that is more customizable. This would allow for more detailed information storage on clients. Further, the one Michelle recommends is comparably priced per month with the current system, with no additional fees required. Michelle states that currently employees waste time continually trying to relearn the ins and outs of each client through disorganized notes from prior consultants that are not easily accessible via the current client management system. These concerns limit employees' ability to quickly brief themselves about the client while traveling, leading to inefficiencies and difficult client interactions.\n\nSpecifically, given this is an issue mostly for the Philadelphia office, Michelle proposes that only the Philadelphia office should switch to the different client management system. This would address the limitations of the current system in the Philadelphia office. Switching to the new system at only the Philadelphia office will require very little coordination between the five different Silver Creek office locations. Only the Philadelphia office director will need to approve the new system and develop a roll out timeline based on his or her sole preferences. Once this is set, only the Silver Creek employees working in Philadelphia would need to be trained on the new client management system. Michelle thinks the idea is worth the effort because it will improve client service and consequently client satisfaction.\n\nNow please rate your extent of endorsement for the idea Michelle voiced. Rate each of the following five statements separately on a five-point scale, where 1 = \"strongly disagree\" and 5 = \"strongly agree\". Give one number for every statement; do not give an overall or averaged score.",
+          "question": "Michelle's idea is valuable.",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        }
+      ],
+      "effects": [
+        {
+          "effect_id": "E77_001",
+          "study_id": "AMJ_1_3",
+          "label": "Managerial Endorsement of the Idea",
+          "manipulation": "Importance of the Idea(High importance vs Low importance)",
+          "groups1": [
+            "A"
+          ],
+          "groups2": [
+            "B"
+          ],
+          "items": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "human_means": [
+            4.17,
+            3.87
+          ],
+          "human_delta": 0.2999999999999998,
+          "human_reported_difference": 0.3,
+          "human_sig": "sig",
+          "span": 4,
+          "coefficients": {
+            "AMJ_1_3_A_q1": 0.2,
+            "AMJ_1_3_A_q2": 0.2,
+            "AMJ_1_3_A_q3": 0.2,
+            "AMJ_1_3_A_q4": 0.2,
+            "AMJ_1_3_A_q5": 0.2,
+            "AMJ_1_3_B_q1": -0.2,
+            "AMJ_1_3_B_q2": -0.2,
+            "AMJ_1_3_B_q3": -0.2,
+            "AMJ_1_3_B_q4": -0.2,
+            "AMJ_1_3_B_q5": -0.2
+          },
+          "split": "calibration"
+        },
+        {
+          "effect_id": "E77_002",
+          "study_id": "AMJ_1_3",
+          "label": "Managerial Endorsement of the Idea",
+          "manipulation": "Interdependencies of Implementing the Idea(High interdependencies vs Low interdependencies)",
+          "groups1": [
+            "E"
+          ],
+          "groups2": [
+            "F"
+          ],
+          "items": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "human_means": [
+            3.99,
+            4.27
+          ],
+          "human_delta": -0.27999999999999936,
+          "human_reported_difference": 0.28,
+          "human_sig": "sig",
+          "span": 4,
+          "coefficients": {
+            "AMJ_1_3_E_q1": 0.2,
+            "AMJ_1_3_E_q2": 0.2,
+            "AMJ_1_3_E_q3": 0.2,
+            "AMJ_1_3_E_q4": 0.2,
+            "AMJ_1_3_E_q5": 0.2,
+            "AMJ_1_3_F_q1": -0.2,
+            "AMJ_1_3_F_q2": -0.2,
+            "AMJ_1_3_F_q3": -0.2,
+            "AMJ_1_3_F_q4": -0.2,
+            "AMJ_1_3_F_q5": -0.2
+          },
+          "split": "calibration"
+        },
+        {
+          "effect_id": "E77_003",
+          "study_id": "AMJ_1_3",
+          "label": "Managerial Endorsement of the Idea",
+          "manipulation": "Resources Required to Implement the Idea(High resources vs Low resources)",
+          "groups1": [
+            "C"
+          ],
+          "groups2": [
+            "D"
+          ],
+          "items": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "human_means": [
+            3.27,
+            4.13
+          ],
+          "human_delta": -0.8599999999999999,
+          "human_reported_difference": 0.86,
+          "human_sig": "sig",
+          "span": 4,
+          "coefficients": {
+            "AMJ_1_3_C_q1": 0.2,
+            "AMJ_1_3_C_q2": 0.2,
+            "AMJ_1_3_C_q3": 0.2,
+            "AMJ_1_3_C_q4": 0.2,
+            "AMJ_1_3_C_q5": 0.2,
+            "AMJ_1_3_D_q1": -0.2,
+            "AMJ_1_3_D_q2": -0.2,
+            "AMJ_1_3_D_q3": -0.2,
+            "AMJ_1_3_D_q4": -0.2,
+            "AMJ_1_3_D_q5": -0.2
+          },
+          "split": "calibration"
+        }
+      ],
+      "fit_case_ids": [
+        "AMJ_1_3_A_q1",
+        "AMJ_1_3_A_q2",
+        "AMJ_1_3_A_q3",
+        "AMJ_1_3_A_q4",
+        "AMJ_1_3_A_q5",
+        "AMJ_1_3_B_q1",
+        "AMJ_1_3_B_q2",
+        "AMJ_1_3_B_q3",
+        "AMJ_1_3_B_q4",
+        "AMJ_1_3_B_q5",
+        "AMJ_1_3_C_q1",
+        "AMJ_1_3_C_q2",
+        "AMJ_1_3_C_q3",
+        "AMJ_1_3_C_q4",
+        "AMJ_1_3_C_q5",
+        "AMJ_1_3_D_q1",
+        "AMJ_1_3_D_q2",
+        "AMJ_1_3_D_q3",
+        "AMJ_1_3_D_q4",
+        "AMJ_1_3_D_q5",
+        "AMJ_1_3_E_q1",
+        "AMJ_1_3_E_q2",
+        "AMJ_1_3_E_q3",
+        "AMJ_1_3_E_q4",
+        "AMJ_1_3_E_q5",
+        "AMJ_1_3_F_q1",
+        "AMJ_1_3_F_q2",
+        "AMJ_1_3_F_q3",
+        "AMJ_1_3_F_q4",
+        "AMJ_1_3_F_q5"
+      ],
+      "fit_effect_ids": [
+        "E77_001",
+        "E77_002",
+        "E77_003"
+      ],
+      "contrast_rank": 3,
+      "main_gpu": 2,
+      "worker_gpu": 3,
+      "selection": "Fit all known effects within this scenario on original/reverse orders. Shortlist two configurations per SAE family and select on the third order. Primary is best valid SAE family on third order, with Prompt fallback. All-three-order results are calibration outcomes, not held-out human-effect validation.",
+      "primary_metric": "Per-order abs(model treatment effect - human treatment effect)/abs(human treatment effect), averaged equally over effects and three orders. Also report original order, each effect, and scale-normalized absolute error.",
+      "limitations": [
+        "Original wording only. All reported human effects are used for calibration; no independent human-effect validation in this run.",
+        "Each study has its own eight-direction controller. Within a study there is no question, condition, or desired-answer routing.",
+        "No random-direction controls, per explicit user instruction.",
+        "LLM and SAE dictionary remain frozen. Only direction selection and controller coefficients are fitted.",
+        "Context gates use a separate causal-prefix forward. No later survey-item text enters the gate.",
+        "JAP trust contains dependent pairwise contrasts and a reverse-coded item; preserve coefficients and report effective rank."
+      ],
+      "source_hashes": {
+        "work\\executive_sae_domain_27b_20261020\\sae_domain_v12_protocol.json": "29630f38aebc433ddcbd8a38b55b41b708f02af0a6a3fae90e1b3f9edeaa0645",
+        "work\\executive_sae_20261019\\protocol.json": "095c3f873590b77f1baab18f81a5e63686e0d188d7112cd28121188e06b7b5ce",
+        "work\\executive_sae_20261019\\sae_chat_v4_protocol.json": "351448e842f3c95b083185d92e9a487bff3224e07eaba5c3a6dccb88c921d5b6"
+      }
+    },
+    {
+      "protocol": "per_scenario_sae_calibration_v13",
+      "date": "2026-10-20",
+      "study_id": "JAP_4_2b",
+      "title": "领导承诺与信任",
+      "model": "/models/Qwen3.5-27B",
+      "sae_root": "/models/SAE27B",
+      "layer": 48,
+      "hidden_size": 5120,
+      "sae_width": 81920,
+      "seed": 2026102013,
+      "context_window": 16,
+      "feature_count": 8,
+      "fit_orders": [
+        0,
+        1
+      ],
+      "selection_orders": [
+        2
+      ],
+      "all_orders": [
+        0,
+        1,
+        2
+      ],
+      "order_definition": {
+        "0": "original",
+        "1": "reverse",
+        "2": "rotate left by floor(n_options/2)"
+      },
+      "doses": [
+        0.1,
+        0.3,
+        0.6
+      ],
+      "fit_penalties": [
+        0.1,
+        1.0
+      ],
+      "ridge": 0.1,
+      "probability_quality": 0.9,
+      "shortlist_per_family": 2,
+      "families": [
+        "sae_static",
+        "sae_context"
+      ],
+      "cases": [
+        {
+          "id": "JAP_4_2b_A_q1",
+          "study_id": "JAP_4_2b",
+          "group": "A",
+          "group_n": 346,
+          "population": "managers evaluating a corporate leader",
+          "item": 1,
+          "scenario": "You are a full-time employee with management experience evaluating a corporate leader. Read the following short business vignette about a CEO who de-escalated commitment to a failing course of action, then make social judgments about how trustworthy the CEO is. Answer every item honestly based only on the information given, using the 7-point Likert scale provided (1 = Strongly Disagree to 7 = Strongly Agree).\n\nThe CEO of Acme Communication Company decided to allocate $40 billion of the company's research budget to a project. The purpose was to build a novel communication technology. When the project is 90% complete ($36 billion already spent), another firm begins marketing a similar communication technology that is much faster and more economical than the technology Acme is building. At this point, the CEO decides to discontinue the project and not invest the last 10% of the research funds.",
+          "question": "The CEO is intelligent. (1 = strongly disagree, 7 = strongly agree)",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "JAP_4_2b_A_q2",
+          "study_id": "JAP_4_2b",
+          "group": "A",
+          "group_n": 346,
+          "population": "managers evaluating a corporate leader",
+          "item": 2,
+          "scenario": "You are a full-time employee with management experience evaluating a corporate leader. Read the following short business vignette about a CEO who de-escalated commitment to a failing course of action, then make social judgments about how trustworthy the CEO is. Answer every item honestly based only on the information given, using the 7-point Likert scale provided (1 = Strongly Disagree to 7 = Strongly Agree).\n\nThe CEO of Acme Communication Company decided to allocate $40 billion of the company's research budget to a project. The purpose was to build a novel communication technology. When the project is 90% complete ($36 billion already spent), another firm begins marketing a similar communication technology that is much faster and more economical than the technology Acme is building. At this point, the CEO decides to discontinue the project and not invest the last 10% of the research funds.",
+          "question": "The CEO is competent. (1 = strongly disagree, 7 = strongly agree)",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "JAP_4_2b_A_q3",
+          "study_id": "JAP_4_2b",
+          "group": "A",
+          "group_n": 346,
+          "population": "managers evaluating a corporate leader",
+          "item": 3,
+          "scenario": "You are a full-time employee with management experience evaluating a corporate leader. Read the following short business vignette about a CEO who de-escalated commitment to a failing course of action, then make social judgments about how trustworthy the CEO is. Answer every item honestly based only on the information given, using the 7-point Likert scale provided (1 = Strongly Disagree to 7 = Strongly Agree).\n\nThe CEO of Acme Communication Company decided to allocate $40 billion of the company's research budget to a project. The purpose was to build a novel communication technology. When the project is 90% complete ($36 billion already spent), another firm begins marketing a similar communication technology that is much faster and more economical than the technology Acme is building. At this point, the CEO decides to discontinue the project and not invest the last 10% of the research funds.",
+          "question": "The CEO is capable. (1 = strongly disagree, 7 = strongly agree)",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "JAP_4_2b_A_q4",
+          "study_id": "JAP_4_2b",
+          "group": "A",
+          "group_n": 346,
+          "population": "managers evaluating a corporate leader",
+          "item": 4,
+          "scenario": "You are a full-time employee with management experience evaluating a corporate leader. Read the following short business vignette about a CEO who de-escalated commitment to a failing course of action, then make social judgments about how trustworthy the CEO is. Answer every item honestly based only on the information given, using the 7-point Likert scale provided (1 = Strongly Disagree to 7 = Strongly Agree).\n\nThe CEO of Acme Communication Company decided to allocate $40 billion of the company's research budget to a project. The purpose was to build a novel communication technology. When the project is 90% complete ($36 billion already spent), another firm begins marketing a similar communication technology that is much faster and more economical than the technology Acme is building. At this point, the CEO decides to discontinue the project and not invest the last 10% of the research funds.",
+          "question": "The CEO is kind. (1 = strongly disagree, 7 = strongly agree)",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "JAP_4_2b_A_q5",
+          "study_id": "JAP_4_2b",
+          "group": "A",
+          "group_n": 346,
+          "population": "managers evaluating a corporate leader",
+          "item": 5,
+          "scenario": "You are a full-time employee with management experience evaluating a corporate leader. Read the following short business vignette about a CEO who de-escalated commitment to a failing course of action, then make social judgments about how trustworthy the CEO is. Answer every item honestly based only on the information given, using the 7-point Likert scale provided (1 = Strongly Disagree to 7 = Strongly Agree).\n\nThe CEO of Acme Communication Company decided to allocate $40 billion of the company's research budget to a project. The purpose was to build a novel communication technology. When the project is 90% complete ($36 billion already spent), another firm begins marketing a similar communication technology that is much faster and more economical than the technology Acme is building. At this point, the CEO decides to discontinue the project and not invest the last 10% of the research funds.",
+          "question": "The CEO is nice. (1 = strongly disagree, 7 = strongly agree)",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "JAP_4_2b_A_q6",
+          "study_id": "JAP_4_2b",
+          "group": "A",
+          "group_n": 346,
+          "population": "managers evaluating a corporate leader",
+          "item": 6,
+          "scenario": "You are a full-time employee with management experience evaluating a corporate leader. Read the following short business vignette about a CEO who de-escalated commitment to a failing course of action, then make social judgments about how trustworthy the CEO is. Answer every item honestly based only on the information given, using the 7-point Likert scale provided (1 = Strongly Disagree to 7 = Strongly Agree).\n\nThe CEO of Acme Communication Company decided to allocate $40 billion of the company's research budget to a project. The purpose was to build a novel communication technology. When the project is 90% complete ($36 billion already spent), another firm begins marketing a similar communication technology that is much faster and more economical than the technology Acme is building. At this point, the CEO decides to discontinue the project and not invest the last 10% of the research funds.",
+          "question": "The CEO is selfish. (1 = strongly disagree, 7 = strongly agree)",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "score_multiplier": -1.0,
+          "score_offset": 8.0
+        },
+        {
+          "id": "JAP_4_2b_A_q7",
+          "study_id": "JAP_4_2b",
+          "group": "A",
+          "group_n": 346,
+          "population": "managers evaluating a corporate leader",
+          "item": 7,
+          "scenario": "You are a full-time employee with management experience evaluating a corporate leader. Read the following short business vignette about a CEO who de-escalated commitment to a failing course of action, then make social judgments about how trustworthy the CEO is. Answer every item honestly based only on the information given, using the 7-point Likert scale provided (1 = Strongly Disagree to 7 = Strongly Agree).\n\nThe CEO of Acme Communication Company decided to allocate $40 billion of the company's research budget to a project. The purpose was to build a novel communication technology. When the project is 90% complete ($36 billion already spent), another firm begins marketing a similar communication technology that is much faster and more economical than the technology Acme is building. At this point, the CEO decides to discontinue the project and not invest the last 10% of the research funds.",
+          "question": "The CEO has a great deal of integrity. (1 = strongly disagree, 7 = strongly agree)",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "JAP_4_2b_A_q8",
+          "study_id": "JAP_4_2b",
+          "group": "A",
+          "group_n": 346,
+          "population": "managers evaluating a corporate leader",
+          "item": 8,
+          "scenario": "You are a full-time employee with management experience evaluating a corporate leader. Read the following short business vignette about a CEO who de-escalated commitment to a failing course of action, then make social judgments about how trustworthy the CEO is. Answer every item honestly based only on the information given, using the 7-point Likert scale provided (1 = Strongly Disagree to 7 = Strongly Agree).\n\nThe CEO of Acme Communication Company decided to allocate $40 billion of the company's research budget to a project. The purpose was to build a novel communication technology. When the project is 90% complete ($36 billion already spent), another firm begins marketing a similar communication technology that is much faster and more economical than the technology Acme is building. At this point, the CEO decides to discontinue the project and not invest the last 10% of the research funds.",
+          "question": "I can trust the CEO's word. (1 = strongly disagree, 7 = strongly agree)",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "JAP_4_2b_A_q9",
+          "study_id": "JAP_4_2b",
+          "group": "A",
+          "group_n": 346,
+          "population": "managers evaluating a corporate leader",
+          "item": 9,
+          "scenario": "You are a full-time employee with management experience evaluating a corporate leader. Read the following short business vignette about a CEO who de-escalated commitment to a failing course of action, then make social judgments about how trustworthy the CEO is. Answer every item honestly based only on the information given, using the 7-point Likert scale provided (1 = Strongly Disagree to 7 = Strongly Agree).\n\nThe CEO of Acme Communication Company decided to allocate $40 billion of the company's research budget to a project. The purpose was to build a novel communication technology. When the project is 90% complete ($36 billion already spent), another firm begins marketing a similar communication technology that is much faster and more economical than the technology Acme is building. At this point, the CEO decides to discontinue the project and not invest the last 10% of the research funds.",
+          "question": "The CEO cares about honesty and truth. (1 = strongly disagree, 7 = strongly agree)",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "JAP_4_2b_B_q1",
+          "study_id": "JAP_4_2b",
+          "group": "B",
+          "group_n": 346,
+          "population": "managers evaluating a corporate leader",
+          "item": 1,
+          "scenario": "You are a full-time employee with management experience evaluating a corporate leader. Read the following short business vignette about a CEO who de-escalated commitment to a failing course of action, then make social judgments about how trustworthy the CEO is. Answer every item honestly based only on the information given, using the 7-point Likert scale provided (1 = Strongly Disagree to 7 = Strongly Agree).\n\nThe CEO of Acme Communication Company decided to allocate $40 billion of the company's research budget to a project. The purpose was to build a novel communication technology. When the project is 90% complete ($36 billion already spent), another firm begins marketing a similar communication technology that is much faster and more economical than the technology Acme is building. At this point, the CEO decides to discontinue the project and not invest the last 10% of the research funds. The CEO explained: \"At the time we allocated the original money, we committed to review the project and stop spending if a faster and more economical option became available. Because this predetermined benchmark was met, we made the choice to stick with what we previously decided and discontinue the project.\"",
+          "question": "The CEO is intelligent. (1 = strongly disagree, 7 = strongly agree)",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "JAP_4_2b_B_q2",
+          "study_id": "JAP_4_2b",
+          "group": "B",
+          "group_n": 346,
+          "population": "managers evaluating a corporate leader",
+          "item": 2,
+          "scenario": "You are a full-time employee with management experience evaluating a corporate leader. Read the following short business vignette about a CEO who de-escalated commitment to a failing course of action, then make social judgments about how trustworthy the CEO is. Answer every item honestly based only on the information given, using the 7-point Likert scale provided (1 = Strongly Disagree to 7 = Strongly Agree).\n\nThe CEO of Acme Communication Company decided to allocate $40 billion of the company's research budget to a project. The purpose was to build a novel communication technology. When the project is 90% complete ($36 billion already spent), another firm begins marketing a similar communication technology that is much faster and more economical than the technology Acme is building. At this point, the CEO decides to discontinue the project and not invest the last 10% of the research funds. The CEO explained: \"At the time we allocated the original money, we committed to review the project and stop spending if a faster and more economical option became available. Because this predetermined benchmark was met, we made the choice to stick with what we previously decided and discontinue the project.\"",
+          "question": "The CEO is competent. (1 = strongly disagree, 7 = strongly agree)",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "JAP_4_2b_B_q3",
+          "study_id": "JAP_4_2b",
+          "group": "B",
+          "group_n": 346,
+          "population": "managers evaluating a corporate leader",
+          "item": 3,
+          "scenario": "You are a full-time employee with management experience evaluating a corporate leader. Read the following short business vignette about a CEO who de-escalated commitment to a failing course of action, then make social judgments about how trustworthy the CEO is. Answer every item honestly based only on the information given, using the 7-point Likert scale provided (1 = Strongly Disagree to 7 = Strongly Agree).\n\nThe CEO of Acme Communication Company decided to allocate $40 billion of the company's research budget to a project. The purpose was to build a novel communication technology. When the project is 90% complete ($36 billion already spent), another firm begins marketing a similar communication technology that is much faster and more economical than the technology Acme is building. At this point, the CEO decides to discontinue the project and not invest the last 10% of the research funds. The CEO explained: \"At the time we allocated the original money, we committed to review the project and stop spending if a faster and more economical option became available. Because this predetermined benchmark was met, we made the choice to stick with what we previously decided and discontinue the project.\"",
+          "question": "The CEO is capable. (1 = strongly disagree, 7 = strongly agree)",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "JAP_4_2b_B_q4",
+          "study_id": "JAP_4_2b",
+          "group": "B",
+          "group_n": 346,
+          "population": "managers evaluating a corporate leader",
+          "item": 4,
+          "scenario": "You are a full-time employee with management experience evaluating a corporate leader. Read the following short business vignette about a CEO who de-escalated commitment to a failing course of action, then make social judgments about how trustworthy the CEO is. Answer every item honestly based only on the information given, using the 7-point Likert scale provided (1 = Strongly Disagree to 7 = Strongly Agree).\n\nThe CEO of Acme Communication Company decided to allocate $40 billion of the company's research budget to a project. The purpose was to build a novel communication technology. When the project is 90% complete ($36 billion already spent), another firm begins marketing a similar communication technology that is much faster and more economical than the technology Acme is building. At this point, the CEO decides to discontinue the project and not invest the last 10% of the research funds. The CEO explained: \"At the time we allocated the original money, we committed to review the project and stop spending if a faster and more economical option became available. Because this predetermined benchmark was met, we made the choice to stick with what we previously decided and discontinue the project.\"",
+          "question": "The CEO is kind. (1 = strongly disagree, 7 = strongly agree)",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "JAP_4_2b_B_q5",
+          "study_id": "JAP_4_2b",
+          "group": "B",
+          "group_n": 346,
+          "population": "managers evaluating a corporate leader",
+          "item": 5,
+          "scenario": "You are a full-time employee with management experience evaluating a corporate leader. Read the following short business vignette about a CEO who de-escalated commitment to a failing course of action, then make social judgments about how trustworthy the CEO is. Answer every item honestly based only on the information given, using the 7-point Likert scale provided (1 = Strongly Disagree to 7 = Strongly Agree).\n\nThe CEO of Acme Communication Company decided to allocate $40 billion of the company's research budget to a project. The purpose was to build a novel communication technology. When the project is 90% complete ($36 billion already spent), another firm begins marketing a similar communication technology that is much faster and more economical than the technology Acme is building. At this point, the CEO decides to discontinue the project and not invest the last 10% of the research funds. The CEO explained: \"At the time we allocated the original money, we committed to review the project and stop spending if a faster and more economical option became available. Because this predetermined benchmark was met, we made the choice to stick with what we previously decided and discontinue the project.\"",
+          "question": "The CEO is nice. (1 = strongly disagree, 7 = strongly agree)",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "JAP_4_2b_B_q6",
+          "study_id": "JAP_4_2b",
+          "group": "B",
+          "group_n": 346,
+          "population": "managers evaluating a corporate leader",
+          "item": 6,
+          "scenario": "You are a full-time employee with management experience evaluating a corporate leader. Read the following short business vignette about a CEO who de-escalated commitment to a failing course of action, then make social judgments about how trustworthy the CEO is. Answer every item honestly based only on the information given, using the 7-point Likert scale provided (1 = Strongly Disagree to 7 = Strongly Agree).\n\nThe CEO of Acme Communication Company decided to allocate $40 billion of the company's research budget to a project. The purpose was to build a novel communication technology. When the project is 90% complete ($36 billion already spent), another firm begins marketing a similar communication technology that is much faster and more economical than the technology Acme is building. At this point, the CEO decides to discontinue the project and not invest the last 10% of the research funds. The CEO explained: \"At the time we allocated the original money, we committed to review the project and stop spending if a faster and more economical option became available. Because this predetermined benchmark was met, we made the choice to stick with what we previously decided and discontinue the project.\"",
+          "question": "The CEO is selfish. (1 = strongly disagree, 7 = strongly agree)",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "score_multiplier": -1.0,
+          "score_offset": 8.0
+        },
+        {
+          "id": "JAP_4_2b_B_q7",
+          "study_id": "JAP_4_2b",
+          "group": "B",
+          "group_n": 346,
+          "population": "managers evaluating a corporate leader",
+          "item": 7,
+          "scenario": "You are a full-time employee with management experience evaluating a corporate leader. Read the following short business vignette about a CEO who de-escalated commitment to a failing course of action, then make social judgments about how trustworthy the CEO is. Answer every item honestly based only on the information given, using the 7-point Likert scale provided (1 = Strongly Disagree to 7 = Strongly Agree).\n\nThe CEO of Acme Communication Company decided to allocate $40 billion of the company's research budget to a project. The purpose was to build a novel communication technology. When the project is 90% complete ($36 billion already spent), another firm begins marketing a similar communication technology that is much faster and more economical than the technology Acme is building. At this point, the CEO decides to discontinue the project and not invest the last 10% of the research funds. The CEO explained: \"At the time we allocated the original money, we committed to review the project and stop spending if a faster and more economical option became available. Because this predetermined benchmark was met, we made the choice to stick with what we previously decided and discontinue the project.\"",
+          "question": "The CEO has a great deal of integrity. (1 = strongly disagree, 7 = strongly agree)",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "JAP_4_2b_B_q8",
+          "study_id": "JAP_4_2b",
+          "group": "B",
+          "group_n": 346,
+          "population": "managers evaluating a corporate leader",
+          "item": 8,
+          "scenario": "You are a full-time employee with management experience evaluating a corporate leader. Read the following short business vignette about a CEO who de-escalated commitment to a failing course of action, then make social judgments about how trustworthy the CEO is. Answer every item honestly based only on the information given, using the 7-point Likert scale provided (1 = Strongly Disagree to 7 = Strongly Agree).\n\nThe CEO of Acme Communication Company decided to allocate $40 billion of the company's research budget to a project. The purpose was to build a novel communication technology. When the project is 90% complete ($36 billion already spent), another firm begins marketing a similar communication technology that is much faster and more economical than the technology Acme is building. At this point, the CEO decides to discontinue the project and not invest the last 10% of the research funds. The CEO explained: \"At the time we allocated the original money, we committed to review the project and stop spending if a faster and more economical option became available. Because this predetermined benchmark was met, we made the choice to stick with what we previously decided and discontinue the project.\"",
+          "question": "I can trust the CEO's word. (1 = strongly disagree, 7 = strongly agree)",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "JAP_4_2b_B_q9",
+          "study_id": "JAP_4_2b",
+          "group": "B",
+          "group_n": 346,
+          "population": "managers evaluating a corporate leader",
+          "item": 9,
+          "scenario": "You are a full-time employee with management experience evaluating a corporate leader. Read the following short business vignette about a CEO who de-escalated commitment to a failing course of action, then make social judgments about how trustworthy the CEO is. Answer every item honestly based only on the information given, using the 7-point Likert scale provided (1 = Strongly Disagree to 7 = Strongly Agree).\n\nThe CEO of Acme Communication Company decided to allocate $40 billion of the company's research budget to a project. The purpose was to build a novel communication technology. When the project is 90% complete ($36 billion already spent), another firm begins marketing a similar communication technology that is much faster and more economical than the technology Acme is building. At this point, the CEO decides to discontinue the project and not invest the last 10% of the research funds. The CEO explained: \"At the time we allocated the original money, we committed to review the project and stop spending if a faster and more economical option became available. Because this predetermined benchmark was met, we made the choice to stick with what we previously decided and discontinue the project.\"",
+          "question": "The CEO cares about honesty and truth. (1 = strongly disagree, 7 = strongly agree)",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "JAP_4_2b_C_q1",
+          "study_id": "JAP_4_2b",
+          "group": "C",
+          "group_n": 346,
+          "population": "managers evaluating a corporate leader",
+          "item": 1,
+          "scenario": "You are a full-time employee with management experience evaluating a corporate leader. Read the following short business vignette about a CEO who de-escalated commitment to a failing course of action, then make social judgments about how trustworthy the CEO is. Answer every item honestly based only on the information given, using the 7-point Likert scale provided (1 = Strongly Disagree to 7 = Strongly Agree).\n\nThe CEO of Acme Communication Company decided to allocate $40 billion of the company's research budget to a project. The purpose was to build a novel communication technology. When the project is 90% complete ($36 billion already spent), another firm begins marketing a similar communication technology that is much faster and more economical than the technology Acme is building. At this point, the CEO decides to discontinue the project and not invest the last 10% of the research funds. The CEO explained: \"A sunk cost is a cost that has already been committed and cannot be recovered. Because nothing can be done about sunk costs, we should ignore them when making decisions about various aspects of life, including policy decisions. Therefore, we made the choice to discontinue the project.\"",
+          "question": "The CEO is intelligent. (1 = strongly disagree, 7 = strongly agree)",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "JAP_4_2b_C_q2",
+          "study_id": "JAP_4_2b",
+          "group": "C",
+          "group_n": 346,
+          "population": "managers evaluating a corporate leader",
+          "item": 2,
+          "scenario": "You are a full-time employee with management experience evaluating a corporate leader. Read the following short business vignette about a CEO who de-escalated commitment to a failing course of action, then make social judgments about how trustworthy the CEO is. Answer every item honestly based only on the information given, using the 7-point Likert scale provided (1 = Strongly Disagree to 7 = Strongly Agree).\n\nThe CEO of Acme Communication Company decided to allocate $40 billion of the company's research budget to a project. The purpose was to build a novel communication technology. When the project is 90% complete ($36 billion already spent), another firm begins marketing a similar communication technology that is much faster and more economical than the technology Acme is building. At this point, the CEO decides to discontinue the project and not invest the last 10% of the research funds. The CEO explained: \"A sunk cost is a cost that has already been committed and cannot be recovered. Because nothing can be done about sunk costs, we should ignore them when making decisions about various aspects of life, including policy decisions. Therefore, we made the choice to discontinue the project.\"",
+          "question": "The CEO is competent. (1 = strongly disagree, 7 = strongly agree)",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "JAP_4_2b_C_q3",
+          "study_id": "JAP_4_2b",
+          "group": "C",
+          "group_n": 346,
+          "population": "managers evaluating a corporate leader",
+          "item": 3,
+          "scenario": "You are a full-time employee with management experience evaluating a corporate leader. Read the following short business vignette about a CEO who de-escalated commitment to a failing course of action, then make social judgments about how trustworthy the CEO is. Answer every item honestly based only on the information given, using the 7-point Likert scale provided (1 = Strongly Disagree to 7 = Strongly Agree).\n\nThe CEO of Acme Communication Company decided to allocate $40 billion of the company's research budget to a project. The purpose was to build a novel communication technology. When the project is 90% complete ($36 billion already spent), another firm begins marketing a similar communication technology that is much faster and more economical than the technology Acme is building. At this point, the CEO decides to discontinue the project and not invest the last 10% of the research funds. The CEO explained: \"A sunk cost is a cost that has already been committed and cannot be recovered. Because nothing can be done about sunk costs, we should ignore them when making decisions about various aspects of life, including policy decisions. Therefore, we made the choice to discontinue the project.\"",
+          "question": "The CEO is capable. (1 = strongly disagree, 7 = strongly agree)",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "JAP_4_2b_C_q4",
+          "study_id": "JAP_4_2b",
+          "group": "C",
+          "group_n": 346,
+          "population": "managers evaluating a corporate leader",
+          "item": 4,
+          "scenario": "You are a full-time employee with management experience evaluating a corporate leader. Read the following short business vignette about a CEO who de-escalated commitment to a failing course of action, then make social judgments about how trustworthy the CEO is. Answer every item honestly based only on the information given, using the 7-point Likert scale provided (1 = Strongly Disagree to 7 = Strongly Agree).\n\nThe CEO of Acme Communication Company decided to allocate $40 billion of the company's research budget to a project. The purpose was to build a novel communication technology. When the project is 90% complete ($36 billion already spent), another firm begins marketing a similar communication technology that is much faster and more economical than the technology Acme is building. At this point, the CEO decides to discontinue the project and not invest the last 10% of the research funds. The CEO explained: \"A sunk cost is a cost that has already been committed and cannot be recovered. Because nothing can be done about sunk costs, we should ignore them when making decisions about various aspects of life, including policy decisions. Therefore, we made the choice to discontinue the project.\"",
+          "question": "The CEO is kind. (1 = strongly disagree, 7 = strongly agree)",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "JAP_4_2b_C_q5",
+          "study_id": "JAP_4_2b",
+          "group": "C",
+          "group_n": 346,
+          "population": "managers evaluating a corporate leader",
+          "item": 5,
+          "scenario": "You are a full-time employee with management experience evaluating a corporate leader. Read the following short business vignette about a CEO who de-escalated commitment to a failing course of action, then make social judgments about how trustworthy the CEO is. Answer every item honestly based only on the information given, using the 7-point Likert scale provided (1 = Strongly Disagree to 7 = Strongly Agree).\n\nThe CEO of Acme Communication Company decided to allocate $40 billion of the company's research budget to a project. The purpose was to build a novel communication technology. When the project is 90% complete ($36 billion already spent), another firm begins marketing a similar communication technology that is much faster and more economical than the technology Acme is building. At this point, the CEO decides to discontinue the project and not invest the last 10% of the research funds. The CEO explained: \"A sunk cost is a cost that has already been committed and cannot be recovered. Because nothing can be done about sunk costs, we should ignore them when making decisions about various aspects of life, including policy decisions. Therefore, we made the choice to discontinue the project.\"",
+          "question": "The CEO is nice. (1 = strongly disagree, 7 = strongly agree)",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "JAP_4_2b_C_q6",
+          "study_id": "JAP_4_2b",
+          "group": "C",
+          "group_n": 346,
+          "population": "managers evaluating a corporate leader",
+          "item": 6,
+          "scenario": "You are a full-time employee with management experience evaluating a corporate leader. Read the following short business vignette about a CEO who de-escalated commitment to a failing course of action, then make social judgments about how trustworthy the CEO is. Answer every item honestly based only on the information given, using the 7-point Likert scale provided (1 = Strongly Disagree to 7 = Strongly Agree).\n\nThe CEO of Acme Communication Company decided to allocate $40 billion of the company's research budget to a project. The purpose was to build a novel communication technology. When the project is 90% complete ($36 billion already spent), another firm begins marketing a similar communication technology that is much faster and more economical than the technology Acme is building. At this point, the CEO decides to discontinue the project and not invest the last 10% of the research funds. The CEO explained: \"A sunk cost is a cost that has already been committed and cannot be recovered. Because nothing can be done about sunk costs, we should ignore them when making decisions about various aspects of life, including policy decisions. Therefore, we made the choice to discontinue the project.\"",
+          "question": "The CEO is selfish. (1 = strongly disagree, 7 = strongly agree)",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "score_multiplier": -1.0,
+          "score_offset": 8.0
+        },
+        {
+          "id": "JAP_4_2b_C_q7",
+          "study_id": "JAP_4_2b",
+          "group": "C",
+          "group_n": 346,
+          "population": "managers evaluating a corporate leader",
+          "item": 7,
+          "scenario": "You are a full-time employee with management experience evaluating a corporate leader. Read the following short business vignette about a CEO who de-escalated commitment to a failing course of action, then make social judgments about how trustworthy the CEO is. Answer every item honestly based only on the information given, using the 7-point Likert scale provided (1 = Strongly Disagree to 7 = Strongly Agree).\n\nThe CEO of Acme Communication Company decided to allocate $40 billion of the company's research budget to a project. The purpose was to build a novel communication technology. When the project is 90% complete ($36 billion already spent), another firm begins marketing a similar communication technology that is much faster and more economical than the technology Acme is building. At this point, the CEO decides to discontinue the project and not invest the last 10% of the research funds. The CEO explained: \"A sunk cost is a cost that has already been committed and cannot be recovered. Because nothing can be done about sunk costs, we should ignore them when making decisions about various aspects of life, including policy decisions. Therefore, we made the choice to discontinue the project.\"",
+          "question": "The CEO has a great deal of integrity. (1 = strongly disagree, 7 = strongly agree)",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "JAP_4_2b_C_q8",
+          "study_id": "JAP_4_2b",
+          "group": "C",
+          "group_n": 346,
+          "population": "managers evaluating a corporate leader",
+          "item": 8,
+          "scenario": "You are a full-time employee with management experience evaluating a corporate leader. Read the following short business vignette about a CEO who de-escalated commitment to a failing course of action, then make social judgments about how trustworthy the CEO is. Answer every item honestly based only on the information given, using the 7-point Likert scale provided (1 = Strongly Disagree to 7 = Strongly Agree).\n\nThe CEO of Acme Communication Company decided to allocate $40 billion of the company's research budget to a project. The purpose was to build a novel communication technology. When the project is 90% complete ($36 billion already spent), another firm begins marketing a similar communication technology that is much faster and more economical than the technology Acme is building. At this point, the CEO decides to discontinue the project and not invest the last 10% of the research funds. The CEO explained: \"A sunk cost is a cost that has already been committed and cannot be recovered. Because nothing can be done about sunk costs, we should ignore them when making decisions about various aspects of life, including policy decisions. Therefore, we made the choice to discontinue the project.\"",
+          "question": "I can trust the CEO's word. (1 = strongly disagree, 7 = strongly agree)",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        },
+        {
+          "id": "JAP_4_2b_C_q9",
+          "study_id": "JAP_4_2b",
+          "group": "C",
+          "group_n": 346,
+          "population": "managers evaluating a corporate leader",
+          "item": 9,
+          "scenario": "You are a full-time employee with management experience evaluating a corporate leader. Read the following short business vignette about a CEO who de-escalated commitment to a failing course of action, then make social judgments about how trustworthy the CEO is. Answer every item honestly based only on the information given, using the 7-point Likert scale provided (1 = Strongly Disagree to 7 = Strongly Agree).\n\nThe CEO of Acme Communication Company decided to allocate $40 billion of the company's research budget to a project. The purpose was to build a novel communication technology. When the project is 90% complete ($36 billion already spent), another firm begins marketing a similar communication technology that is much faster and more economical than the technology Acme is building. At this point, the CEO decides to discontinue the project and not invest the last 10% of the research funds. The CEO explained: \"A sunk cost is a cost that has already been committed and cannot be recovered. Because nothing can be done about sunk costs, we should ignore them when making decisions about various aspects of life, including policy decisions. Therefore, we made the choice to discontinue the project.\"",
+          "question": "The CEO cares about honesty and truth. (1 = strongly disagree, 7 = strongly agree)",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "score_multiplier": 1.0,
+          "score_offset": 0.0
+        }
+      ],
+      "effects": [
+        {
+          "effect_id": "B2_097",
+          "study_id": "JAP_4_2b",
+          "label": "Integrity-based trust",
+          "manipulation": "Precommitment (present vs. absent/control)",
+          "groups1": [
+            "B"
+          ],
+          "groups2": [
+            "A"
+          ],
+          "items": [
+            7,
+            8,
+            9
+          ],
+          "human_means": [
+            5.11,
+            4.18
+          ],
+          "human_delta": 0.9300000000000006,
+          "human_reported_difference": 0.94,
+          "human_sig": "sig",
+          "span": 6,
+          "coefficients": {
+            "JAP_4_2b_B_q7": 0.3333333333333333,
+            "JAP_4_2b_B_q8": 0.3333333333333333,
+            "JAP_4_2b_B_q9": 0.3333333333333333,
+            "JAP_4_2b_A_q7": -0.3333333333333333,
+            "JAP_4_2b_A_q8": -0.3333333333333333,
+            "JAP_4_2b_A_q9": -0.3333333333333333
+          },
+          "split": "calibration"
+        },
+        {
+          "effect_id": "B2_098",
+          "study_id": "JAP_4_2b",
+          "label": "Ability-based trust",
+          "manipulation": "Precommitment (present vs. absent/control)",
+          "groups1": [
+            "B"
+          ],
+          "groups2": [
+            "A"
+          ],
+          "items": [
+            1,
+            2,
+            3
+          ],
+          "human_means": [
+            4.93,
+            4.32
+          ],
+          "human_delta": 0.6099999999999994,
+          "human_reported_difference": 0.6,
+          "human_sig": "sig",
+          "span": 6,
+          "coefficients": {
+            "JAP_4_2b_B_q1": 0.3333333333333333,
+            "JAP_4_2b_B_q2": 0.3333333333333333,
+            "JAP_4_2b_B_q3": 0.3333333333333333,
+            "JAP_4_2b_A_q1": -0.3333333333333333,
+            "JAP_4_2b_A_q2": -0.3333333333333333,
+            "JAP_4_2b_A_q3": -0.3333333333333333
+          },
+          "split": "calibration"
+        },
+        {
+          "effect_id": "B2_099",
+          "study_id": "JAP_4_2b",
+          "label": "Benevolence-based trust",
+          "manipulation": "Precommitment (present vs. absent/control)",
+          "groups1": [
+            "B"
+          ],
+          "groups2": [
+            "A"
+          ],
+          "items": [
+            4,
+            5,
+            6
+          ],
+          "human_means": [
+            4.43,
+            4.02
+          ],
+          "human_delta": 0.41000000000000014,
+          "human_reported_difference": 0.41,
+          "human_sig": "sig",
+          "span": 6,
+          "coefficients": {
+            "JAP_4_2b_B_q4": 0.3333333333333333,
+            "JAP_4_2b_B_q5": 0.3333333333333333,
+            "JAP_4_2b_B_q6": -0.3333333333333333,
+            "JAP_4_2b_A_q4": -0.3333333333333333,
+            "JAP_4_2b_A_q5": -0.3333333333333333,
+            "JAP_4_2b_A_q6": 0.3333333333333333
+          },
+          "split": "calibration"
+        },
+        {
+          "effect_id": "B2_143",
+          "study_id": "JAP_4_2b",
+          "label": "Integrity-based trust",
+          "manipulation": "Precommitment vs. Economic Justification",
+          "groups1": [
+            "B"
+          ],
+          "groups2": [
+            "C"
+          ],
+          "items": [
+            7,
+            8,
+            9
+          ],
+          "human_means": [
+            5.11,
+            4.43
+          ],
+          "human_delta": 0.6800000000000006,
+          "human_reported_difference": 0.68,
+          "human_sig": "sig",
+          "span": 6,
+          "coefficients": {
+            "JAP_4_2b_B_q7": 0.3333333333333333,
+            "JAP_4_2b_B_q8": 0.3333333333333333,
+            "JAP_4_2b_B_q9": 0.3333333333333333,
+            "JAP_4_2b_C_q7": -0.3333333333333333,
+            "JAP_4_2b_C_q8": -0.3333333333333333,
+            "JAP_4_2b_C_q9": -0.3333333333333333
+          },
+          "split": "calibration"
+        },
+        {
+          "effect_id": "B2_144",
+          "study_id": "JAP_4_2b",
+          "label": "Integrity-based trust",
+          "manipulation": "Economic Justification vs. Control",
+          "groups1": [
+            "C"
+          ],
+          "groups2": [
+            "A"
+          ],
+          "items": [
+            7,
+            8,
+            9
+          ],
+          "human_means": [
+            4.43,
+            4.18
+          ],
+          "human_delta": 0.25,
+          "human_reported_difference": 0.25,
+          "human_sig": "sig",
+          "span": 6,
+          "coefficients": {
+            "JAP_4_2b_C_q7": 0.3333333333333333,
+            "JAP_4_2b_C_q8": 0.3333333333333333,
+            "JAP_4_2b_C_q9": 0.3333333333333333,
+            "JAP_4_2b_A_q7": -0.3333333333333333,
+            "JAP_4_2b_A_q8": -0.3333333333333333,
+            "JAP_4_2b_A_q9": -0.3333333333333333
+          },
+          "split": "calibration"
+        },
+        {
+          "effect_id": "B2_145",
+          "study_id": "JAP_4_2b",
+          "label": "Ability-based trust",
+          "manipulation": "Precommitment vs. Economic Justification",
+          "groups1": [
+            "B"
+          ],
+          "groups2": [
+            "C"
+          ],
+          "items": [
+            1,
+            2,
+            3
+          ],
+          "human_means": [
+            4.93,
+            4.45
+          ],
+          "human_delta": 0.47999999999999954,
+          "human_reported_difference": 0.48,
+          "human_sig": "sig",
+          "span": 6,
+          "coefficients": {
+            "JAP_4_2b_B_q1": 0.3333333333333333,
+            "JAP_4_2b_B_q2": 0.3333333333333333,
+            "JAP_4_2b_B_q3": 0.3333333333333333,
+            "JAP_4_2b_C_q1": -0.3333333333333333,
+            "JAP_4_2b_C_q2": -0.3333333333333333,
+            "JAP_4_2b_C_q3": -0.3333333333333333
+          },
+          "split": "calibration"
+        },
+        {
+          "effect_id": "B2_146",
+          "study_id": "JAP_4_2b",
+          "label": "Ability-based trust",
+          "manipulation": "Economic Justification vs. Control",
+          "groups1": [
+            "C"
+          ],
+          "groups2": [
+            "A"
+          ],
+          "items": [
+            1,
+            2,
+            3
+          ],
+          "human_means": [
+            4.45,
+            4.32
+          ],
+          "human_delta": 0.1299999999999999,
+          "human_reported_difference": 0.13,
+          "human_sig": "nonsig",
+          "span": 6,
+          "coefficients": {
+            "JAP_4_2b_C_q1": 0.3333333333333333,
+            "JAP_4_2b_C_q2": 0.3333333333333333,
+            "JAP_4_2b_C_q3": 0.3333333333333333,
+            "JAP_4_2b_A_q1": -0.3333333333333333,
+            "JAP_4_2b_A_q2": -0.3333333333333333,
+            "JAP_4_2b_A_q3": -0.3333333333333333
+          },
+          "split": "calibration"
+        },
+        {
+          "effect_id": "B2_147",
+          "study_id": "JAP_4_2b",
+          "label": "Benevolence-based trust",
+          "manipulation": "Precommitment vs. Economic Justification",
+          "groups1": [
+            "B"
+          ],
+          "groups2": [
+            "C"
+          ],
+          "items": [
+            4,
+            5,
+            6
+          ],
+          "human_means": [
+            4.43,
+            4.08
+          ],
+          "human_delta": 0.34999999999999964,
+          "human_reported_difference": 0.35,
+          "human_sig": "sig",
+          "span": 6,
+          "coefficients": {
+            "JAP_4_2b_B_q4": 0.3333333333333333,
+            "JAP_4_2b_B_q5": 0.3333333333333333,
+            "JAP_4_2b_B_q6": -0.3333333333333333,
+            "JAP_4_2b_C_q4": -0.3333333333333333,
+            "JAP_4_2b_C_q5": -0.3333333333333333,
+            "JAP_4_2b_C_q6": 0.3333333333333333
+          },
+          "split": "calibration"
+        },
+        {
+          "effect_id": "B2_148",
+          "study_id": "JAP_4_2b",
+          "label": "Benevolence-based trust",
+          "manipulation": "Economic Justification vs. Control",
+          "groups1": [
+            "C"
+          ],
+          "groups2": [
+            "A"
+          ],
+          "items": [
+            4,
+            5,
+            6
+          ],
+          "human_means": [
+            4.08,
+            4.02
+          ],
+          "human_delta": 0.0600000000000005,
+          "human_reported_difference": 0.06,
+          "human_sig": "nonsig",
+          "span": 6,
+          "coefficients": {
+            "JAP_4_2b_C_q4": 0.3333333333333333,
+            "JAP_4_2b_C_q5": 0.3333333333333333,
+            "JAP_4_2b_C_q6": -0.3333333333333333,
+            "JAP_4_2b_A_q4": -0.3333333333333333,
+            "JAP_4_2b_A_q5": -0.3333333333333333,
+            "JAP_4_2b_A_q6": 0.3333333333333333
+          },
+          "split": "calibration"
+        }
+      ],
+      "fit_case_ids": [
+        "JAP_4_2b_A_q1",
+        "JAP_4_2b_A_q2",
+        "JAP_4_2b_A_q3",
+        "JAP_4_2b_A_q4",
+        "JAP_4_2b_A_q5",
+        "JAP_4_2b_A_q6",
+        "JAP_4_2b_A_q7",
+        "JAP_4_2b_A_q8",
+        "JAP_4_2b_A_q9",
+        "JAP_4_2b_B_q1",
+        "JAP_4_2b_B_q2",
+        "JAP_4_2b_B_q3",
+        "JAP_4_2b_B_q4",
+        "JAP_4_2b_B_q5",
+        "JAP_4_2b_B_q6",
+        "JAP_4_2b_B_q7",
+        "JAP_4_2b_B_q8",
+        "JAP_4_2b_B_q9",
+        "JAP_4_2b_C_q1",
+        "JAP_4_2b_C_q2",
+        "JAP_4_2b_C_q3",
+        "JAP_4_2b_C_q4",
+        "JAP_4_2b_C_q5",
+        "JAP_4_2b_C_q6",
+        "JAP_4_2b_C_q7",
+        "JAP_4_2b_C_q8",
+        "JAP_4_2b_C_q9"
+      ],
+      "fit_effect_ids": [
+        "B2_097",
+        "B2_098",
+        "B2_099",
+        "B2_143",
+        "B2_144",
+        "B2_145",
+        "B2_146",
+        "B2_147",
+        "B2_148"
+      ],
+      "contrast_rank": 6,
+      "main_gpu": 6,
+      "worker_gpu": 7,
+      "selection": "Fit all known effects within this scenario on original/reverse orders. Shortlist two configurations per SAE family and select on the third order. Primary is best valid SAE family on third order, with Prompt fallback. All-three-order results are calibration outcomes, not held-out human-effect validation.",
+      "primary_metric": "Per-order abs(model treatment effect - human treatment effect)/abs(human treatment effect), averaged equally over effects and three orders. Also report original order, each effect, and scale-normalized absolute error.",
+      "limitations": [
+        "Original wording only. All reported human effects are used for calibration; no independent human-effect validation in this run.",
+        "Each study has its own eight-direction controller. Within a study there is no question, condition, or desired-answer routing.",
+        "No random-direction controls, per explicit user instruction.",
+        "LLM and SAE dictionary remain frozen. Only direction selection and controller coefficients are fitted.",
+        "Context gates use a separate causal-prefix forward. No later survey-item text enters the gate.",
+        "JAP trust contains dependent pairwise contrasts and a reverse-coded item; preserve coefficients and report effective rank."
+      ],
+      "source_hashes": {
+        "work\\executive_sae_domain_27b_20261020\\sae_domain_v12_protocol.json": "29630f38aebc433ddcbd8a38b55b41b708f02af0a6a3fae90e1b3f9edeaa0645",
+        "work\\executive_sae_20261019\\protocol.json": "095c3f873590b77f1baab18f81a5e63686e0d188d7112cd28121188e06b7b5ce",
+        "work\\executive_sae_20261019\\sae_chat_v4_protocol.json": "351448e842f3c95b083185d92e9a487bff3224e07eaba5c3a6dccb88c921d5b6"
+      }
+    }
+  ]
+}

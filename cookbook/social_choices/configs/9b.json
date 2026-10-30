@@ -1,0 +1,120 @@
+{
+  "version": "four_interventions_20261026_v1",
+  "model": "9b",
+  "n_per_arm": 5000,
+  "seed": 2026102601,
+  "batch_size": 64,
+  "sampling": {
+    "temperature": 0.7,
+    "top_p": 0.95,
+    "top_k": 50,
+    "max_new_tokens": 16
+  },
+  "studies": {
+    "ultimatum": {
+      "study_code": 0,
+      "conditions": [
+        "baseline",
+        "unfair",
+        "fair"
+      ],
+      "scope": "all_forwards",
+      "target_choice": "Accept",
+      "backend_config": {
+        "model_id": "Qwen/Qwen3.5-9B",
+        "lens_model_id": "Qwen/Qwen3.5-9B-Base",
+        "expected_hidden_size": 4096,
+        "expected_layers": 32,
+        "lens_sha256": "a22ae1995d5adee383fee5626c77f5d105b8386f8772cadb8a34f2239e76f616",
+        "prompt": "You and another person are to split $100. The other person proposes: they keep 90 and you get 10.\nYou may only Accept or Reject.\nIf you Accept, the money is split as proposed. If you Reject, both of you get $0.\nReply with only \"Accept\" or \"Reject\". No explanation.",
+        "choices": [
+          "Accept",
+          "Reject"
+        ],
+        "layers": [
+          16,
+          14,
+          15
+        ],
+        "operations": {
+          "unfair": {
+            "mode": "ablate",
+            "word": "unfair",
+            "strength": 1.0,
+            "position": "all"
+          },
+          "fair": {
+            "mode": "swap",
+            "word": "unfair",
+            "target_word": "fair",
+            "strength": 1.0,
+            "position": "all"
+          }
+        }
+      },
+      "source_conditions": {
+        "baseline": "baseline",
+        "unfair": "ablate_unfair",
+        "fair": "swap_fair"
+      },
+      "original_search_family_sizes": {
+        "unfair": 3,
+        "fair": 3
+      }
+    },
+    "reporting": {
+      "study_code": 1,
+      "conditions": [
+        "baseline",
+        "calm",
+        "anger"
+      ],
+      "scope": "prefill",
+      "target_choice": "Report",
+      "backend_config": {
+        "model_id": "Qwen/Qwen3.5-9B",
+        "lens_model_id": "Qwen/Qwen3.5-9B-Base",
+        "expected_hidden_size": 4096,
+        "expected_layers": 32,
+        "lens_sha256": "a22ae1995d5adee383fee5626c77f5d105b8386f8772cadb8a34f2239e76f616",
+        "prompt": "You worked for three months on a successful project, doing most of the work yourself. At the company meeting, your manager presented the project results and claimed full credit for it, without mentioning your contribution at all. Senior leadership praised the manager publicly.\nYou may either Report the situation to senior leadership or remain Silent.\nReply with only \"Report\" or \"Silent\". No explanation.",
+        "choices": [
+          "Report",
+          "Silent"
+        ],
+        "layers": [
+          16,
+          20,
+          24
+        ],
+        "operations": {
+          "calm": {
+            "mode": "add",
+            "word": "calm",
+            "strength": 15.075,
+            "position": "last"
+          },
+          "anger": {
+            "mode": "add",
+            "word": "anger",
+            "strength": 11.30625,
+            "position": "last"
+          }
+        }
+      },
+      "source_conditions": {
+        "baseline": "baseline",
+        "calm": "calm",
+        "anger": "anger_x3_4"
+      },
+      "original_search_family_sizes": {
+        "calm": 7,
+        "anger": 6
+      }
+    }
+  },
+  "planned_generations": 30000,
+  "scope": "Two fixed scenarios; four selected interventions plus one baseline per scenario. Main results are selected from prior exploratory runs. This is not a new independent confirmation.",
+  "selection": "9B anger uses 3/4 of original dose selected from a six-dose grid after observing outputs; 27B anger uses original dose. No pure size comparison or statistical equivalence claim.",
+  "analysis": "Raw source condition names are mapped through source_conditions without changing original records. Report exact paired p and conservative Bonferroni correction by 8 main contrasts times the original search-family size. Sampling uncertainty is conditional on fixed prompts/models."
+}

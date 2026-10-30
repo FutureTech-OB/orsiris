@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "seed": 20261015,
+  "model": {"backend": "hf", "model_id": "Qwen/Qwen3.5-27B", "path": "../../checkpoints/Qwen3.5-27B", "dtype": "bfloat16", "device_map": "auto", "auto_class": "image_text", "chat_template": true, "enable_thinking": false},
+  "cases": "organization_cases.json",
+  "output": "../../runs/qwen27-jspace-organization",
+  "directions": {
+    "unfairness_related": {"kind": "jspace", "model_id": "Qwen/Qwen3.5-27B", "layer": 48, "checkpoint": "../../checkpoints/Qwen3.5-27B_jacobian_lens.pt", "tokens": ["unfair", "injustice"]}
+  },
+  "interventions": [
+    {"name": "sham", "mode": "add", "direction": "unfairness_related", "strength": 0, "scale": "residual_norm", "site": "event_end"},
+    {"name": "unfairness_plus", "mode": "add", "direction": "unfairness_related", "strength": 0.15, "scale": "residual_norm", "site": "event_end"},
+    {"name": "unfairness_minus", "mode": "add", "direction": "unfairness_related", "strength": -0.15, "scale": "residual_norm", "site": "event_end"}
+  ]
+}

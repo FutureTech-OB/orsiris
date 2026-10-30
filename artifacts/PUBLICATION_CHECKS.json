@@ -1,0 +1,74 @@
+{
+  "data": {
+    "path_metadata_files_anonymized": [],
+    "experimental_records_unchanged": true,
+    "archive_sha256": "b53c41ca17b49880e442432cd61e0344d5e6371500f906d9dcba28385720b86d",
+    "checks": [
+      {
+        "passed": true,
+        "verified_files": 40
+      },
+      {
+        "passed": true,
+        "records": {
+          "social_choices": 60000,
+          "managerial": 606
+        },
+        "decision_readout_records": 4,
+        "managerial_studies": 4,
+        "effect_contrasts": 20,
+        "scope": "Saved-data recomputation; no new human observations or model calls."
+      }
+    ]
+  },
+  "full": {
+    "path_metadata_files_anonymized": [
+      "social_choices/environment/requirements.lock.txt",
+      "managerial/protocols/calibration.json",
+      "managerial/protocols/transfer.json",
+      "managerial/assets/AMJ_1_3/frozen_protocol.json",
+      "managerial/assets/HRM_1_1/frozen_protocol.json",
+      "managerial/assets/JAP_4_2b/frozen_protocol.json"
+    ],
+    "experimental_records_unchanged": true,
+    "archive_sha256": "f17f7b53c173d59b5fe464c66144d21105ef37dae1f80c3054600a5ce0f5e69d",
+    "checks": [
+      {
+        "passed": true,
+        "verified_files": 101
+      },
+      {
+        "passed": true,
+        "records": {
+          "social_choices": 60000,
+          "managerial": 606
+        },
+        "decision_readout_records": 4,
+        "managerial_studies": 4,
+        "effect_contrasts": 20,
+        "scope": "Saved-data recomputation; no new human observations or model calls."
+      }
+    ]
+  },
+  "scope": "Public source and saved-data validation; no new GPU behavioral run.",
+  "identity_and_secret_pattern_scan": "Passed for source files and decompressed artifact contents.",
+  "software_tests": {
+    "successful": true,
+    "tests": 38,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "python": "3.13.2",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "versions": {
+      "torch": "2.9.1+cpu",
+      "transformers": "5.20.2",
+      "accelerate": "1.15.0",
+      "tokenizers": "0.23.3",
+      "safetensors": "0.8.0",
+      "numpy": "2.5.4",
+      "osiris-research": "0.1.0"
+    },
+    "scope": "CPU software validation using random tiny weights; no 27B behavior rerun"
+  }
+}

@@ -1,0 +1,765 @@
+{
+  "protocol": "new_study_frozen_trust_transfer_v17",
+  "date": "2026-10-20",
+  "seed": 2026102024,
+  "model": "/models/Qwen3.5-27B",
+  "sae_root": "/models/SAE27B",
+  "layer": 48,
+  "hidden_size": 5120,
+  "sae_width": 81920,
+  "gpus": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "expected_reads_by_shard": [
+    30,
+    30,
+    30,
+    30,
+    24,
+    24,
+    24,
+    24
+  ],
+  "studies": [
+    {
+      "study_id": "JAP_4_1_new",
+      "orders": [
+        0,
+        1,
+        2
+      ],
+      "controller_format": "v13",
+      "controller_directory": "/artifacts/managerial/assets/JAP_4_2b"
+    }
+  ],
+  "cases": [
+    {
+      "id": "JAP_4_1_new_time_control_q1__none",
+      "study_id": "JAP_4_1_new",
+      "group": "time_control",
+      "item": 1,
+      "scenario": "Read the following situation and evaluate the manager.\n\nJess is the manager of a fast-food restaurant that has been trying to come up with a new recipe for a bun on which the chain can sell burgers. Jess has spent 8 months working on developing this new bun. When the bun is introduced in stores, it does not sell well. After 3 months, Jess decides to stop selling it.",
+      "question": "Jess is intelligent. (1 = strongly disagree, 7 = strongly agree)",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_case_id": "JAP_4_1_new_time_control_q1",
+      "persona_id": "none",
+      "shard": 0
+    },
+    {
+      "id": "JAP_4_1_new_time_control_q2__none",
+      "study_id": "JAP_4_1_new",
+      "group": "time_control",
+      "item": 2,
+      "scenario": "Read the following situation and evaluate the manager.\n\nJess is the manager of a fast-food restaurant that has been trying to come up with a new recipe for a bun on which the chain can sell burgers. Jess has spent 8 months working on developing this new bun. When the bun is introduced in stores, it does not sell well. After 3 months, Jess decides to stop selling it.",
+      "question": "Jess is competent. (1 = strongly disagree, 7 = strongly agree)",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_case_id": "JAP_4_1_new_time_control_q2",
+      "persona_id": "none",
+      "shard": 1
+    },
+    {
+      "id": "JAP_4_1_new_time_control_q3__none",
+      "study_id": "JAP_4_1_new",
+      "group": "time_control",
+      "item": 3,
+      "scenario": "Read the following situation and evaluate the manager.\n\nJess is the manager of a fast-food restaurant that has been trying to come up with a new recipe for a bun on which the chain can sell burgers. Jess has spent 8 months working on developing this new bun. When the bun is introduced in stores, it does not sell well. After 3 months, Jess decides to stop selling it.",
+      "question": "Jess is capable. (1 = strongly disagree, 7 = strongly agree)",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_case_id": "JAP_4_1_new_time_control_q3",
+      "persona_id": "none",
+      "shard": 2
+    },
+    {
+      "id": "JAP_4_1_new_time_control_q4__none",
+      "study_id": "JAP_4_1_new",
+      "group": "time_control",
+      "item": 4,
+      "scenario": "Read the following situation and evaluate the manager.\n\nJess is the manager of a fast-food restaurant that has been trying to come up with a new recipe for a bun on which the chain can sell burgers. Jess has spent 8 months working on developing this new bun. When the bun is introduced in stores, it does not sell well. After 3 months, Jess decides to stop selling it.",
+      "question": "Jess is kind. (1 = strongly disagree, 7 = strongly agree)",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_case_id": "JAP_4_1_new_time_control_q4",
+      "persona_id": "none",
+      "shard": 3
+    },
+    {
+      "id": "JAP_4_1_new_time_control_q5__none",
+      "study_id": "JAP_4_1_new",
+      "group": "time_control",
+      "item": 5,
+      "scenario": "Read the following situation and evaluate the manager.\n\nJess is the manager of a fast-food restaurant that has been trying to come up with a new recipe for a bun on which the chain can sell burgers. Jess has spent 8 months working on developing this new bun. When the bun is introduced in stores, it does not sell well. After 3 months, Jess decides to stop selling it.",
+      "question": "Jess is nice. (1 = strongly disagree, 7 = strongly agree)",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_case_id": "JAP_4_1_new_time_control_q5",
+      "persona_id": "none",
+      "shard": 4
+    },
+    {
+      "id": "JAP_4_1_new_time_control_q6__none",
+      "study_id": "JAP_4_1_new",
+      "group": "time_control",
+      "item": 6,
+      "scenario": "Read the following situation and evaluate the manager.\n\nJess is the manager of a fast-food restaurant that has been trying to come up with a new recipe for a bun on which the chain can sell burgers. Jess has spent 8 months working on developing this new bun. When the bun is introduced in stores, it does not sell well. After 3 months, Jess decides to stop selling it.",
+      "question": "Jess is selfish. (1 = strongly disagree, 7 = strongly agree)",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_case_id": "JAP_4_1_new_time_control_q6",
+      "persona_id": "none",
+      "shard": 5
+    },
+    {
+      "id": "JAP_4_1_new_time_control_q7__none",
+      "study_id": "JAP_4_1_new",
+      "group": "time_control",
+      "item": 7,
+      "scenario": "Read the following situation and evaluate the manager.\n\nJess is the manager of a fast-food restaurant that has been trying to come up with a new recipe for a bun on which the chain can sell burgers. Jess has spent 8 months working on developing this new bun. When the bun is introduced in stores, it does not sell well. After 3 months, Jess decides to stop selling it.",
+      "question": "Jess has a great deal of integrity. (1 = strongly disagree, 7 = strongly agree)",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_case_id": "JAP_4_1_new_time_control_q7",
+      "persona_id": "none",
+      "shard": 6
+    },
+    {
+      "id": "JAP_4_1_new_time_control_q8__none",
+      "study_id": "JAP_4_1_new",
+      "group": "time_control",
+      "item": 8,
+      "scenario": "Read the following situation and evaluate the manager.\n\nJess is the manager of a fast-food restaurant that has been trying to come up with a new recipe for a bun on which the chain can sell burgers. Jess has spent 8 months working on developing this new bun. When the bun is introduced in stores, it does not sell well. After 3 months, Jess decides to stop selling it.",
+      "question": "I can trust Jess's word. (1 = strongly disagree, 7 = strongly agree)",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_case_id": "JAP_4_1_new_time_control_q8",
+      "persona_id": "none",
+      "shard": 7
+    },
+    {
+      "id": "JAP_4_1_new_time_control_q9__none",
+      "study_id": "JAP_4_1_new",
+      "group": "time_control",
+      "item": 9,
+      "scenario": "Read the following situation and evaluate the manager.\n\nJess is the manager of a fast-food restaurant that has been trying to come up with a new recipe for a bun on which the chain can sell burgers. Jess has spent 8 months working on developing this new bun. When the bun is introduced in stores, it does not sell well. After 3 months, Jess decides to stop selling it.",
+      "question": "Jess cares about honesty and truth. (1 = strongly disagree, 7 = strongly agree)",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_case_id": "JAP_4_1_new_time_control_q9",
+      "persona_id": "none",
+      "shard": 0
+    },
+    {
+      "id": "JAP_4_1_new_time_precommit_q1__none",
+      "study_id": "JAP_4_1_new",
+      "group": "time_precommit",
+      "item": 1,
+      "scenario": "Read the following situation and evaluate the manager.\n\nJess is the manager of a fast-food restaurant that has been trying to come up with a new recipe for a bun on which the chain can sell burgers. Jess has spent 8 months working on developing this new bun. Jess precommits to pulling the new bun if customers don't seem to like it. When the bun is introduced in stores, it does not sell well. After 3 months, Jess decides to stop selling it.",
+      "question": "Jess is intelligent. (1 = strongly disagree, 7 = strongly agree)",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_case_id": "JAP_4_1_new_time_precommit_q1",
+      "persona_id": "none",
+      "shard": 1
+    },
+    {
+      "id": "JAP_4_1_new_time_precommit_q2__none",
+      "study_id": "JAP_4_1_new",
+      "group": "time_precommit",
+      "item": 2,
+      "scenario": "Read the following situation and evaluate the manager.\n\nJess is the manager of a fast-food restaurant that has been trying to come up with a new recipe for a bun on which the chain can sell burgers. Jess has spent 8 months working on developing this new bun. Jess precommits to pulling the new bun if customers don't seem to like it. When the bun is introduced in stores, it does not sell well. After 3 months, Jess decides to stop selling it.",
+      "question": "Jess is competent. (1 = strongly disagree, 7 = strongly agree)",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_case_id": "JAP_4_1_new_time_precommit_q2",
+      "persona_id": "none",
+      "shard": 2
+    },
+    {
+      "id": "JAP_4_1_new_time_precommit_q3__none",
+      "study_id": "JAP_4_1_new",
+      "group": "time_precommit",
+      "item": 3,
+      "scenario": "Read the following situation and evaluate the manager.\n\nJess is the manager of a fast-food restaurant that has been trying to come up with a new recipe for a bun on which the chain can sell burgers. Jess has spent 8 months working on developing this new bun. Jess precommits to pulling the new bun if customers don't seem to like it. When the bun is introduced in stores, it does not sell well. After 3 months, Jess decides to stop selling it.",
+      "question": "Jess is capable. (1 = strongly disagree, 7 = strongly agree)",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_case_id": "JAP_4_1_new_time_precommit_q3",
+      "persona_id": "none",
+      "shard": 3
+    },
+    {
+      "id": "JAP_4_1_new_time_precommit_q4__none",
+      "study_id": "JAP_4_1_new",
+      "group": "time_precommit",
+      "item": 4,
+      "scenario": "Read the following situation and evaluate the manager.\n\nJess is the manager of a fast-food restaurant that has been trying to come up with a new recipe for a bun on which the chain can sell burgers. Jess has spent 8 months working on developing this new bun. Jess precommits to pulling the new bun if customers don't seem to like it. When the bun is introduced in stores, it does not sell well. After 3 months, Jess decides to stop selling it.",
+      "question": "Jess is kind. (1 = strongly disagree, 7 = strongly agree)",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_case_id": "JAP_4_1_new_time_precommit_q4",
+      "persona_id": "none",
+      "shard": 4
+    },
+    {
+      "id": "JAP_4_1_new_time_precommit_q5__none",
+      "study_id": "JAP_4_1_new",
+      "group": "time_precommit",
+      "item": 5,
+      "scenario": "Read the following situation and evaluate the manager.\n\nJess is the manager of a fast-food restaurant that has been trying to come up with a new recipe for a bun on which the chain can sell burgers. Jess has spent 8 months working on developing this new bun. Jess precommits to pulling the new bun if customers don't seem to like it. When the bun is introduced in stores, it does not sell well. After 3 months, Jess decides to stop selling it.",
+      "question": "Jess is nice. (1 = strongly disagree, 7 = strongly agree)",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_case_id": "JAP_4_1_new_time_precommit_q5",
+      "persona_id": "none",
+      "shard": 5
+    },
+    {
+      "id": "JAP_4_1_new_time_precommit_q6__none",
+      "study_id": "JAP_4_1_new",
+      "group": "time_precommit",
+      "item": 6,
+      "scenario": "Read the following situation and evaluate the manager.\n\nJess is the manager of a fast-food restaurant that has been trying to come up with a new recipe for a bun on which the chain can sell burgers. Jess has spent 8 months working on developing this new bun. Jess precommits to pulling the new bun if customers don't seem to like it. When the bun is introduced in stores, it does not sell well. After 3 months, Jess decides to stop selling it.",
+      "question": "Jess is selfish. (1 = strongly disagree, 7 = strongly agree)",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_case_id": "JAP_4_1_new_time_precommit_q6",
+      "persona_id": "none",
+      "shard": 6
+    },
+    {
+      "id": "JAP_4_1_new_time_precommit_q7__none",
+      "study_id": "JAP_4_1_new",
+      "group": "time_precommit",
+      "item": 7,
+      "scenario": "Read the following situation and evaluate the manager.\n\nJess is the manager of a fast-food restaurant that has been trying to come up with a new recipe for a bun on which the chain can sell burgers. Jess has spent 8 months working on developing this new bun. Jess precommits to pulling the new bun if customers don't seem to like it. When the bun is introduced in stores, it does not sell well. After 3 months, Jess decides to stop selling it.",
+      "question": "Jess has a great deal of integrity. (1 = strongly disagree, 7 = strongly agree)",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_case_id": "JAP_4_1_new_time_precommit_q7",
+      "persona_id": "none",
+      "shard": 7
+    },
+    {
+      "id": "JAP_4_1_new_time_precommit_q8__none",
+      "study_id": "JAP_4_1_new",
+      "group": "time_precommit",
+      "item": 8,
+      "scenario": "Read the following situation and evaluate the manager.\n\nJess is the manager of a fast-food restaurant that has been trying to come up with a new recipe for a bun on which the chain can sell burgers. Jess has spent 8 months working on developing this new bun. Jess precommits to pulling the new bun if customers don't seem to like it. When the bun is introduced in stores, it does not sell well. After 3 months, Jess decides to stop selling it.",
+      "question": "I can trust Jess's word. (1 = strongly disagree, 7 = strongly agree)",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_case_id": "JAP_4_1_new_time_precommit_q8",
+      "persona_id": "none",
+      "shard": 0
+    },
+    {
+      "id": "JAP_4_1_new_time_precommit_q9__none",
+      "study_id": "JAP_4_1_new",
+      "group": "time_precommit",
+      "item": 9,
+      "scenario": "Read the following situation and evaluate the manager.\n\nJess is the manager of a fast-food restaurant that has been trying to come up with a new recipe for a bun on which the chain can sell burgers. Jess has spent 8 months working on developing this new bun. Jess precommits to pulling the new bun if customers don't seem to like it. When the bun is introduced in stores, it does not sell well. After 3 months, Jess decides to stop selling it.",
+      "question": "Jess cares about honesty and truth. (1 = strongly disagree, 7 = strongly agree)",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_case_id": "JAP_4_1_new_time_precommit_q9",
+      "persona_id": "none",
+      "shard": 1
+    },
+    {
+      "id": "JAP_4_1_new_money_control_q1__none",
+      "study_id": "JAP_4_1_new",
+      "group": "money_control",
+      "item": 1,
+      "scenario": "Read the following situation and evaluate the manager.\n\nJess is the manager of a fast-food restaurant that has been trying to come up with a new recipe for a bun on which the chain can sell burgers. The cost of developing the new recipe has been $800,000. When the bun is introduced in stores, it does not sell well. After 3 months, Jess decides to stop selling it.",
+      "question": "Jess is intelligent. (1 = strongly disagree, 7 = strongly agree)",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_case_id": "JAP_4_1_new_money_control_q1",
+      "persona_id": "none",
+      "shard": 2
+    },
+    {
+      "id": "JAP_4_1_new_money_control_q2__none",
+      "study_id": "JAP_4_1_new",
+      "group": "money_control",
+      "item": 2,
+      "scenario": "Read the following situation and evaluate the manager.\n\nJess is the manager of a fast-food restaurant that has been trying to come up with a new recipe for a bun on which the chain can sell burgers. The cost of developing the new recipe has been $800,000. When the bun is introduced in stores, it does not sell well. After 3 months, Jess decides to stop selling it.",
+      "question": "Jess is competent. (1 = strongly disagree, 7 = strongly agree)",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_case_id": "JAP_4_1_new_money_control_q2",
+      "persona_id": "none",
+      "shard": 3
+    },
+    {
+      "id": "JAP_4_1_new_money_control_q3__none",
+      "study_id": "JAP_4_1_new",
+      "group": "money_control",
+      "item": 3,
+      "scenario": "Read the following situation and evaluate the manager.\n\nJess is the manager of a fast-food restaurant that has been trying to come up with a new recipe for a bun on which the chain can sell burgers. The cost of developing the new recipe has been $800,000. When the bun is introduced in stores, it does not sell well. After 3 months, Jess decides to stop selling it.",
+      "question": "Jess is capable. (1 = strongly disagree, 7 = strongly agree)",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_case_id": "JAP_4_1_new_money_control_q3",
+      "persona_id": "none",
+      "shard": 4
+    },
+    {
+      "id": "JAP_4_1_new_money_control_q4__none",
+      "study_id": "JAP_4_1_new",
+      "group": "money_control",
+      "item": 4,
+      "scenario": "Read the following situation and evaluate the manager.\n\nJess is the manager of a fast-food restaurant that has been trying to come up with a new recipe for a bun on which the chain can sell burgers. The cost of developing the new recipe has been $800,000. When the bun is introduced in stores, it does not sell well. After 3 months, Jess decides to stop selling it.",
+      "question": "Jess is kind. (1 = strongly disagree, 7 = strongly agree)",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_case_id": "JAP_4_1_new_money_control_q4",
+      "persona_id": "none",
+      "shard": 5
+    },
+    {
+      "id": "JAP_4_1_new_money_control_q5__none",
+      "study_id": "JAP_4_1_new",
+      "group": "money_control",
+      "item": 5,
+      "scenario": "Read the following situation and evaluate the manager.\n\nJess is the manager of a fast-food restaurant that has been trying to come up with a new recipe for a bun on which the chain can sell burgers. The cost of developing the new recipe has been $800,000. When the bun is introduced in stores, it does not sell well. After 3 months, Jess decides to stop selling it.",
+      "question": "Jess is nice. (1 = strongly disagree, 7 = strongly agree)",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_case_id": "JAP_4_1_new_money_control_q5",
+      "persona_id": "none",
+      "shard": 6
+    },
+    {
+      "id": "JAP_4_1_new_money_control_q6__none",
+      "study_id": "JAP_4_1_new",
+      "group": "money_control",
+      "item": 6,
+      "scenario": "Read the following situation and evaluate the manager.\n\nJess is the manager of a fast-food restaurant that has been trying to come up with a new recipe for a bun on which the chain can sell burgers. The cost of developing the new recipe has been $800,000. When the bun is introduced in stores, it does not sell well. After 3 months, Jess decides to stop selling it.",
+      "question": "Jess is selfish. (1 = strongly disagree, 7 = strongly agree)",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_case_id": "JAP_4_1_new_money_control_q6",
+      "persona_id": "none",
+      "shard": 7
+    },
+    {
+      "id": "JAP_4_1_new_money_control_q7__none",
+      "study_id": "JAP_4_1_new",
+      "group": "money_control",
+      "item": 7,
+      "scenario": "Read the following situation and evaluate the manager.\n\nJess is the manager of a fast-food restaurant that has been trying to come up with a new recipe for a bun on which the chain can sell burgers. The cost of developing the new recipe has been $800,000. When the bun is introduced in stores, it does not sell well. After 3 months, Jess decides to stop selling it.",
+      "question": "Jess has a great deal of integrity. (1 = strongly disagree, 7 = strongly agree)",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_case_id": "JAP_4_1_new_money_control_q7",
+      "persona_id": "none",
+      "shard": 0
+    },
+    {
+      "id": "JAP_4_1_new_money_control_q8__none",
+      "study_id": "JAP_4_1_new",
+      "group": "money_control",
+      "item": 8,
+      "scenario": "Read the following situation and evaluate the manager.\n\nJess is the manager of a fast-food restaurant that has been trying to come up with a new recipe for a bun on which the chain can sell burgers. The cost of developing the new recipe has been $800,000. When the bun is introduced in stores, it does not sell well. After 3 months, Jess decides to stop selling it.",
+      "question": "I can trust Jess's word. (1 = strongly disagree, 7 = strongly agree)",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_case_id": "JAP_4_1_new_money_control_q8",
+      "persona_id": "none",
+      "shard": 1
+    },
+    {
+      "id": "JAP_4_1_new_money_control_q9__none",
+      "study_id": "JAP_4_1_new",
+      "group": "money_control",
+      "item": 9,
+      "scenario": "Read the following situation and evaluate the manager.\n\nJess is the manager of a fast-food restaurant that has been trying to come up with a new recipe for a bun on which the chain can sell burgers. The cost of developing the new recipe has been $800,000. When the bun is introduced in stores, it does not sell well. After 3 months, Jess decides to stop selling it.",
+      "question": "Jess cares about honesty and truth. (1 = strongly disagree, 7 = strongly agree)",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_case_id": "JAP_4_1_new_money_control_q9",
+      "persona_id": "none",
+      "shard": 2
+    },
+    {
+      "id": "JAP_4_1_new_money_precommit_q1__none",
+      "study_id": "JAP_4_1_new",
+      "group": "money_precommit",
+      "item": 1,
+      "scenario": "Read the following situation and evaluate the manager.\n\nJess is the manager of a fast-food restaurant that has been trying to come up with a new recipe for a bun on which the chain can sell burgers. The cost of developing the new recipe has been $800,000. Jess precommits to pulling the new bun if customers don't seem to like it. When the bun is introduced in stores, it does not sell well. After 3 months, Jess decides to stop selling it.",
+      "question": "Jess is intelligent. (1 = strongly disagree, 7 = strongly agree)",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_case_id": "JAP_4_1_new_money_precommit_q1",
+      "persona_id": "none",
+      "shard": 3
+    },
+    {
+      "id": "JAP_4_1_new_money_precommit_q2__none",
+      "study_id": "JAP_4_1_new",
+      "group": "money_precommit",
+      "item": 2,
+      "scenario": "Read the following situation and evaluate the manager.\n\nJess is the manager of a fast-food restaurant that has been trying to come up with a new recipe for a bun on which the chain can sell burgers. The cost of developing the new recipe has been $800,000. Jess precommits to pulling the new bun if customers don't seem to like it. When the bun is introduced in stores, it does not sell well. After 3 months, Jess decides to stop selling it.",
+      "question": "Jess is competent. (1 = strongly disagree, 7 = strongly agree)",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_case_id": "JAP_4_1_new_money_precommit_q2",
+      "persona_id": "none",
+      "shard": 4
+    },
+    {
+      "id": "JAP_4_1_new_money_precommit_q3__none",
+      "study_id": "JAP_4_1_new",
+      "group": "money_precommit",
+      "item": 3,
+      "scenario": "Read the following situation and evaluate the manager.\n\nJess is the manager of a fast-food restaurant that has been trying to come up with a new recipe for a bun on which the chain can sell burgers. The cost of developing the new recipe has been $800,000. Jess precommits to pulling the new bun if customers don't seem to like it. When the bun is introduced in stores, it does not sell well. After 3 months, Jess decides to stop selling it.",
+      "question": "Jess is capable. (1 = strongly disagree, 7 = strongly agree)",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_case_id": "JAP_4_1_new_money_precommit_q3",
+      "persona_id": "none",
+      "shard": 5
+    },
+    {
+      "id": "JAP_4_1_new_money_precommit_q4__none",
+      "study_id": "JAP_4_1_new",
+      "group": "money_precommit",
+      "item": 4,
+      "scenario": "Read the following situation and evaluate the manager.\n\nJess is the manager of a fast-food restaurant that has been trying to come up with a new recipe for a bun on which the chain can sell burgers. The cost of developing the new recipe has been $800,000. Jess precommits to pulling the new bun if customers don't seem to like it. When the bun is introduced in stores, it does not sell well. After 3 months, Jess decides to stop selling it.",
+      "question": "Jess is kind. (1 = strongly disagree, 7 = strongly agree)",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_case_id": "JAP_4_1_new_money_precommit_q4",
+      "persona_id": "none",
+      "shard": 6
+    },
+    {
+      "id": "JAP_4_1_new_money_precommit_q5__none",
+      "study_id": "JAP_4_1_new",
+      "group": "money_precommit",
+      "item": 5,
+      "scenario": "Read the following situation and evaluate the manager.\n\nJess is the manager of a fast-food restaurant that has been trying to come up with a new recipe for a bun on which the chain can sell burgers. The cost of developing the new recipe has been $800,000. Jess precommits to pulling the new bun if customers don't seem to like it. When the bun is introduced in stores, it does not sell well. After 3 months, Jess decides to stop selling it.",
+      "question": "Jess is nice. (1 = strongly disagree, 7 = strongly agree)",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_case_id": "JAP_4_1_new_money_precommit_q5",
+      "persona_id": "none",
+      "shard": 7
+    },
+    {
+      "id": "JAP_4_1_new_money_precommit_q6__none",
+      "study_id": "JAP_4_1_new",
+      "group": "money_precommit",
+      "item": 6,
+      "scenario": "Read the following situation and evaluate the manager.\n\nJess is the manager of a fast-food restaurant that has been trying to come up with a new recipe for a bun on which the chain can sell burgers. The cost of developing the new recipe has been $800,000. Jess precommits to pulling the new bun if customers don't seem to like it. When the bun is introduced in stores, it does not sell well. After 3 months, Jess decides to stop selling it.",
+      "question": "Jess is selfish. (1 = strongly disagree, 7 = strongly agree)",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_case_id": "JAP_4_1_new_money_precommit_q6",
+      "persona_id": "none",
+      "shard": 0
+    },
+    {
+      "id": "JAP_4_1_new_money_precommit_q7__none",
+      "study_id": "JAP_4_1_new",
+      "group": "money_precommit",
+      "item": 7,
+      "scenario": "Read the following situation and evaluate the manager.\n\nJess is the manager of a fast-food restaurant that has been trying to come up with a new recipe for a bun on which the chain can sell burgers. The cost of developing the new recipe has been $800,000. Jess precommits to pulling the new bun if customers don't seem to like it. When the bun is introduced in stores, it does not sell well. After 3 months, Jess decides to stop selling it.",
+      "question": "Jess has a great deal of integrity. (1 = strongly disagree, 7 = strongly agree)",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_case_id": "JAP_4_1_new_money_precommit_q7",
+      "persona_id": "none",
+      "shard": 1
+    },
+    {
+      "id": "JAP_4_1_new_money_precommit_q8__none",
+      "study_id": "JAP_4_1_new",
+      "group": "money_precommit",
+      "item": 8,
+      "scenario": "Read the following situation and evaluate the manager.\n\nJess is the manager of a fast-food restaurant that has been trying to come up with a new recipe for a bun on which the chain can sell burgers. The cost of developing the new recipe has been $800,000. Jess precommits to pulling the new bun if customers don't seem to like it. When the bun is introduced in stores, it does not sell well. After 3 months, Jess decides to stop selling it.",
+      "question": "I can trust Jess's word. (1 = strongly disagree, 7 = strongly agree)",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_case_id": "JAP_4_1_new_money_precommit_q8",
+      "persona_id": "none",
+      "shard": 2
+    },
+    {
+      "id": "JAP_4_1_new_money_precommit_q9__none",
+      "study_id": "JAP_4_1_new",
+      "group": "money_precommit",
+      "item": 9,
+      "scenario": "Read the following situation and evaluate the manager.\n\nJess is the manager of a fast-food restaurant that has been trying to come up with a new recipe for a bun on which the chain can sell burgers. The cost of developing the new recipe has been $800,000. Jess precommits to pulling the new bun if customers don't seem to like it. When the bun is introduced in stores, it does not sell well. After 3 months, Jess decides to stop selling it.",
+      "question": "Jess cares about honesty and truth. (1 = strongly disagree, 7 = strongly agree)",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "source_case_id": "JAP_4_1_new_money_precommit_q9",
+      "persona_id": "none",
+      "shard": 3
+    }
+  ],
+  "data_scope": "Submission restaurant transfer only, without demographic persona."
+}

@@ -1,0 +1,97 @@
+{
+  "version": "submission_decision_readout_20261029",
+  "emotion_words": [
+    "anger",
+    "angry",
+    "furious",
+    "calm",
+    "fear",
+    "afraid",
+    "scared",
+    "anxious",
+    "anxiety",
+    "sad",
+    "sadness",
+    "happy",
+    "joy",
+    "disgust",
+    "surprise",
+    "shame",
+    "guilt",
+    "pride",
+    "envy",
+    "regret",
+    "relief",
+    "frustration",
+    "disappointment",
+    "resentment",
+    "gratitude",
+    "hope",
+    "trust",
+    "distrust",
+    "excited",
+    "lonely",
+    "embarrassed",
+    "worried"
+  ],
+  "appraisal_words": [
+    "fair",
+    "unfair",
+    "injustice",
+    "loss",
+    "risk",
+    "betrayal"
+  ],
+  "primary": {
+    "position": "decision_end",
+    "aggregate": "Mean signed cosine across the three specified layers; rank emotion and appraisal separately."
+  },
+  "models": {
+    "9b": {
+      "num_layers": 32,
+      "layers": [
+        16,
+        20,
+        24
+      ],
+      "primary_layers": [
+        16,
+        20,
+        24
+      ],
+      "lens_sha256": "a22ae1995d5adee383fee5626c77f5d105b8386f8772cadb8a34f2239e76f616",
+      "lens_model_id": "Qwen/Qwen3.5-9B-Base"
+    },
+    "27b": {
+      "num_layers": 64,
+      "layers": [
+        32,
+        40,
+        48
+      ],
+      "primary_layers": [
+        32,
+        40,
+        48
+      ],
+      "lens_sha256": "bb2e080ae9c9c20825adfa66c115be214ae027d867e525246a6879cb7fe6bbd6",
+      "lens_model_id": "Qwen/Qwen3.5-27B"
+    }
+  },
+  "scenarios": {
+    "ultimatum": {
+      "prompt": "You and another person are to split $100. The other person proposes: they keep 90 and you get 10.\nYou may only Accept or Reject.\nIf you Accept, the money is split as proposed. If you Reject, both of you get $0.\nReply with only \"Accept\" or \"Reject\". No explanation.",
+      "choices": [
+        "Accept",
+        "Reject"
+      ]
+    },
+    "reporting": {
+      "prompt": "You worked for three months on a successful project, doing most of the work yourself. At the company meeting, your manager presented the project results and claimed full credit for it, without mentioning your contribution at all. Senior leadership praised the manager publicly.\nYou may either Report the situation to senior leadership or remain Silent.\nReply with only \"Report\" or \"Silent\". No explanation.",
+      "choices": [
+        "Report",
+        "Silent"
+      ]
+    }
+  }
+}

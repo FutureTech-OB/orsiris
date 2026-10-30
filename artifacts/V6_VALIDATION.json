@@ -1,0 +1,65 @@
+{
+  "data": {
+    "archive": "Data_Recompute_v6.zip",
+    "sha256": "b7218ce5d61156d734cbb1858e348a39459452e5f702147024c030b8e858e0bd",
+    "bytes": 403894,
+    "verified": {
+      "passed": true,
+      "verified_files": 40
+    },
+    "recomputed": {
+      "passed": true,
+      "records": {
+        "social_choices": 60000,
+        "managerial": 606
+      },
+      "decision_readout_records": 4,
+      "managerial_studies": 4,
+      "effect_contrasts": 20,
+      "scope": "Saved-data recomputation; no new human observations or model calls."
+    },
+    "unchanged_scientific_files": 14,
+    "independent_arithmetic_check": true
+  },
+  "full": {
+    "archive": "Full_Reproduction_v6.zip",
+    "sha256": "5390ea956898a438c332f5c5163d0c0f7abfc8b09346c54615ae420df650fb70",
+    "bytes": 5805083,
+    "verified": {
+      "passed": true,
+      "verified_files": 101
+    },
+    "recomputed": {
+      "passed": true,
+      "records": {
+        "social_choices": 60000,
+        "managerial": 606
+      },
+      "decision_readout_records": 4,
+      "managerial_studies": 4,
+      "effect_contrasts": 20,
+      "scope": "Saved-data recomputation; no new human observations or model calls."
+    },
+    "unchanged_scientific_files": 39,
+    "independent_arithmetic_check": true
+  },
+  "software_tests": {
+    "successful": true,
+    "tests": 40,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "python": "3.13.2",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "versions": {
+      "torch": "2.9.1+cpu",
+      "transformers": "5.20.2",
+      "accelerate": "1.15.0",
+      "tokenizers": "0.23.3",
+      "safetensors": "0.8.0",
+      "numpy": "2.5.4",
+      "osiris-research": "0.1.0"
+    },
+    "scope": "CPU software validation using random tiny weights; no 27B behavior rerun"
+  }
+}

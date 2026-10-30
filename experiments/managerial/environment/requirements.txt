@@ -1,0 +1,5 @@
+# Install CUDA-matched torch 2.6.0 separately; direct dependencies, not an original full lockfile.
+numpy==1.26.4
+transformers==5.13.1
+accelerate>=1,<2
+safetensors>=0.4

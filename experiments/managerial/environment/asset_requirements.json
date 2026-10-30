@@ -1,0 +1,42 @@
+{
+  "model": "Qwen/Qwen3.5-27B",
+  "dtype": "bfloat16",
+  "hidden_size": 5120,
+  "layers": 64,
+  "sae_file": "layer48.sae.pt",
+  "sae_width": 81920,
+  "top_k": 100,
+  "checkpoint_hash_note": "Full pretrained model/SAE shard hashes were not preserved for these original runs. Use the matched assets and retain new run hashes; do not relabel later checkpoint hashes as historical proof.",
+  "fitted_assets": {
+    "HRM_1_1": {
+      "sha256": "10824019aebf38ac9108497b4f23554edf979b46b6b6865d98bde6bebc699fa1",
+      "configuration": {
+        "id": "sae_context_p0.1_d0.6",
+        "kind": "sae_context",
+        "controller": "sae_context_p0.1",
+        "dose": 0.6
+      },
+      "shape_valid": true
+    },
+    "AMJ_1_3": {
+      "sha256": "f75df204e92b1f5ff2d81b526a95069443f31d6e8ecf1adc5743207396029104",
+      "configuration": {
+        "id": "sae_context_p1.0_d0.6",
+        "kind": "sae_context",
+        "controller": "sae_context_p1.0",
+        "dose": 0.6
+      },
+      "shape_valid": true
+    },
+    "JAP_4_2b": {
+      "sha256": "d4900ef6677a156e4edc4f0ca7630e223711a0d780572c8ebb8ca1218758c9be",
+      "configuration": {
+        "id": "sae_context_p1.0_d0.6",
+        "kind": "sae_context",
+        "controller": "sae_context_p1.0",
+        "dose": 0.6
+      },
+      "shape_valid": true
+    }
+  }
+}
